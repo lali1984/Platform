@@ -2,6 +2,7 @@
   "name": "user-service",
   "version": "1.0.0",
   "scripts": {
+    "health": "node -e \"const http = require('http'); http.get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1); }).on('error', () => process.exit(1));\"",
     "dev": "nodemon --exec ts-node src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"

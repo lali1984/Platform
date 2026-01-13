@@ -18,11 +18,11 @@ services:
     networks:
       - app-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin"]
-      interval: 5s
+      test: ["CMD-SHELL", "pg_isready -U admin -d auth_db"]
+      interval: 10s
       timeout: 5s
       retries: 5
-    restart: unless-stopped
+      start_period: 30s
 
   postgres-user:
     image: postgres:15-alpine
@@ -181,6 +181,12 @@ services:
         condition: service_healthy
     command: npm run dev
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "npm", "run", "health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s  # Дать время для запуска приложения
 
   user-service:
     build: ./src/user-service
@@ -251,3 +257,4 @@ volumes:
 networks:
   app-network:
     driver: bridge
+    name: platform-ecosystem_app-network  # Использовать существующее имя
