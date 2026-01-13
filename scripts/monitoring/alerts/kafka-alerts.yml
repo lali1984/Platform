@@ -1,0 +1,21 @@
+# Kafka Alerting Configuration
+alerts:
+  - name: kafka_broker_down
+    condition: kafka_up == 0
+    severity: critical
+    description: "Kafka broker is down"
+    
+  - name: kafka_topic_no_messages
+    condition: "increase(kafka_topic_messages_total[1h]) == 0"
+    severity: warning  
+    description: "No new messages in topic for 1 hour"
+    
+  - name: high_consumer_lag
+    condition: kafka_consumer_lag > 10000
+    severity: warning
+    description: "High consumer lag detected"
+    
+  - name: kafka_under_replicated_partitions
+    condition: kafka_under_replicated_partitions > 0
+    severity: critical
+    description: "Kafka has under-replicated partitions"

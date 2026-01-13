@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Platform Ecosystem Test</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 40px; 
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .section { 
+            background: white;
+            margin: 10px 0; 
+            padding: 20px; 
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            color: #2c3e50; 
+            text-align: center;
+            grid-column: 1 / -1;
+        }
+        h3 { 
+            color: #3498db; 
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        input, select, textarea { 
+            margin: 5px; 
+            padding: 10px; 
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 22px);
+            box-sizing: border-box;
+        }
+        button { 
+            margin: 5px; 
+            padding: 10px 20px; 
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        button:hover { 
+            background: #2980b9; 
+        }
+        button.danger {
+            background: #e74c3c;
+        }
+        button.danger:hover {
+            background: #c0392b;
+        }
+        button.success {
+            background: #2ecc71;
+        }
+        button.success:hover {
+            background: #27ae60;
+        }
+        .result { 
+            background: #f8f9fa; 
+            padding: 12px; 
+            margin: 10px 0; 
+            border-radius: 4px;
+            border-left: 4px solid #3498db;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .status { 
+            padding: 4px 8px; 
+            border-radius: 3px; 
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .status.success { background: #d4edda; color: #155724; }
+        .status.error { background: #f8d7da; color: #721c24; }
+        .flex { display: flex; align-items: center; }
+        .logs { 
+            grid-column: 1 / -1;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        .log-entry { 
+            padding: 5px 10px; 
+            border-bottom: 1px solid #34495e;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        .log-time { color: #95a5a6; margin-right: 15px; }
+        .log-success { color: #2ecc71; }
+        .log-error { color: #e74c3c; }
+        .log-info { color: #3498db; }
+        .connection-status {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .connected { background: #2ecc71; color: white; }
+        .disconnected { background: #e74c3c; color: white; }
+        .tabs {
+            display: flex;
+            grid-column: 1 / -1;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background: #ecf0f1;
+            margin-right: 5px;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab.active {
+            background: #3498db;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .test-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .test-buttons button {
+            flex: 1;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div id="connectionStatus" class="connection-status disconnected">Disconnected</div>
+    
+    <div class="container">
+        <h1>🚀 Platform Ecosystem Test Panel</h1>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('gateway')">API Gateway</div>
+            <div class="tab" onclick="switchTab('auth')">Authentication</div>
+            <div class="tab" onclick="switchTab('services')">Services</div>
+            <div class="tab" onclick="switchTab('monitoring')">Monitoring</div>
+        </div>
+        
+        <!-- Tab 1: API Gateway -->
+        <div id="gatewayTab" class="tab-content active">
+            <div class="section">
+                <h3>🌐 API Gateway Health & Status</h3>
+                <div class="test-buttons">
+                    <button class="success" onclick="testEndpoint('/health', 'gatewayResult')">/health</button>
+                    <button onclick="testEndpoint('/status', 'gatewayResult')">/status</button>
+                    <button onclick="testAllGatewayEndpoints()">Test All</button>
+                </div>
+                <div id="gatewayResult" class="result">Click a button to test API Gateway endpoints</div>
+            </div>
+            
+            <div class="section">
+                <h3>🔗 Gateway Routing Test</h3>
+                <div class="test-buttons">
+                    <button onclick="testEndpoint('/', 'routingResult')">Frontend (/)</button>
+                    <button onclick="testEndpoint('/api/', 'routingResult')">API Root (/api/)</button>
+                    <button onclick="testEndpoint('/static/', 'routingResult')">Static Files</button>
+                    <button onclick="testEndpoint('/nonexistent', 'routingResult')">404 Test</button>
+                </div>
+                <div id="routingResult" class="result">Test gateway routing rules</div>
+            </div>
+        </div>
+        
+        <!-- Tab 2: Authentication -->
+        <div id="authTab" class="tab-content">
+            <!-- Health Checks -->
+            <div class="section">
+                <h3>🏥 Auth Service Health</h3>
+                <div class="test-buttons">
+                    <button onclick="testEndpoint('/api/auth/health', 'authHealthResult')">Via Gateway</button>
+                    <button onclick="testDirect('http://localhost:3001/health', 'authHealthResult')">Direct (3001)</button>
+                </div>
+                <div id="authHealthResult" class="result">Click a button to test auth service health</div>
+            </div>
+            
+            <!-- Registration -->
+            <div class="section">
+                <h3>📝 User Registration</h3>
+                <input type="email" id="regEmail" placeholder="Email" value="test@example.com">
+                <input type="password" id="regPassword" placeholder="Password" value="Test123!@#">
+                <input type="text" id="regUsername" placeholder="Username (optional)" value="testuser">
+                <div class="test-buttons">
+                    <button class="success" onclick="register()">Register User</button>
+                    <button onclick="testRegistrationFlow()">Test Full Flow</button>
+                    <button class="danger" onclick="clearAuthData()">Clear Auth Data</button>
+                </div>
+                <div id="registerResult" class="result"></div>
+            </div>
+            
+            <!-- Login & Tokens -->
+            <div class="section">
+                <h3>🔐 Login & Tokens</h3>
+                <div class="test-buttons">
+                    <button onclick="login()">Login (test user)</button>
+                    <button onclick="loginWithCustom()">Custom Login</button>
+                    <button onclick="verifyToken()">Verify Token</button>
+                    <button onclick="refreshToken()">Refresh Token</button>
+                    <button class="danger" onclick="logout()">Logout</button>
+                </div>
+                <div id="loginResult" class="result"></div>
+            </div>
+            
+            <!-- Current Auth State -->
+            <div class="section">
+                <h3>📊 Current Authentication State</h3>
+                <div id="authState" class="result">
+                    No active session. Please login first.
+                </div>
+                <div class="test-buttons">
+                    <button onclick="getProfile()">Get Profile</button>
+                    <button onclick="updateAuthState()">Refresh State</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab 3: Services -->
+        <div id="servicesTab" class="tab-content">
+            <div class="section">
+                <h3>🔧 Services Health Check</h3>
+                <div class="test-buttons">
+                    <button onclick="testEndpoint('/api/users/health', 'servicesResult')">User Service</button>
+                    <button onclick="testDirect('http://localhost:3002/health', 'servicesResult')">User Direct (3002)</button>
+                    <button onclick="testEndpoint('/api/health', 'servicesResult')">BFF Gateway</button>
+                    <button onclick="testDirect('http://localhost:3003/health', 'servicesResult')">BFF Direct (3003)</button>
+                </div>
+                <div id="servicesResult" class="result">Test individual services</div>
+            </div>
+            
+            <div class="section">
+                <h3>🌐 Direct Service Access</h3>
+                <div class="test-buttons">
+                    <button onclick="testDirect('http://localhost:5173', 'directResult')">Frontend (5173)</button>
+                    <button onclick="testDirect('http://localhost:8081', 'directResult')">Kafka UI (8081)</button>
+                    <button onclick="testDirect('http://localhost:5432', 'directResult')">Postgres Auth (5432)</button>
+                    <button onclick="testDirect('http://localhost:5433', 'directResult')">Postgres User (5433)</button>
+                </div>
+                <div id="directResult" class="result">Direct service access tests</div>
+            </div>
+            
+            <div class="section">
+                <h3>🚀 Bulk Service Test</h3>
+                <button class="success" onclick="testAllServices()">Test All Services & Gateways</button>
+                <div id="bulkResult" class="result">Bulk test results will appear here</div>
+            </div>
+        </div>
+        
+        <!-- Tab 4: Monitoring -->
+        <div id="monitoringTab" class="tab-content">
+            <div class="section">
+                <h3>📈 System Status</h3>
+                <div class="test-buttons">
+                    <button onclick="checkSystemStatus()">Check System Status</button>
+                    <button onclick="checkPorts()">Check Open Ports</button>
+                    <button onclick="checkContainers()">Check Containers</button>
+                </div>
+                <div id="monitoringResult" class="result"></div>
+            </div>
+            
+            <div class="section logs">
+                <h3 style="color: white;">📋 Activity Log</h3>
+                <div id="activityLogs">
+                    <div class="log-entry">
+                        <span class="log-time">00:00:00</span>
+                        <span class="log-info">Test panel loaded. Click buttons to start testing.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>⚙️ Configuration</h3>
+                <div class="test-buttons">
+                    <button onclick="showConfig()">Show Current Config</button>
+                    <button onclick="exportLogs()">Export Logs</button>
+                    <button class="danger" onclick="clearLogs()">Clear Logs</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ================= CONFIGURATION =================
+        const GATEWAY_URL = 'http://localhost:8080';
+        const AUTH_DIRECT_URL = 'http://localhost:3001';
+        const USER_DIRECT_URL = 'http://localhost:3002';
+        const BFF_DIRECT_URL = 'http://localhost:3003';
+        const FRONTEND_URL = 'http://localhost:5173';
+        
+        let authData = {
+            accessToken: localStorage.getItem('accessToken'),
+            refreshToken: localStorage.getItem('refreshToken'),
+            userId: localStorage.getItem('userId'),
+            email: localStorage.getItem('email')
+        };
+        
+        let logs = JSON.parse(localStorage.getItem('testLogs') || '[]');
+        
+        // ================= UTILITY FUNCTIONS =================
+        function log(message, type = 'info') {
+            const time = new Date().toLocaleTimeString();
+            const logEntry = {
+                time,
+                message,
+                type
+            };
+            
+            logs.unshift(logEntry);
+            if (logs.length > 100) logs.pop();
+            
+            localStorage.setItem('testLogs', JSON.stringify(logs));
+            
+            // Update UI
+            const logsDiv = document.getElementById('activityLogs');
+            if (logsDiv) {
+                logsDiv.innerHTML = logs.map(log => 
+                    `<div class="log-entry">
+                        <span class="log-time">${log.time}</span>
+                        <span class="log-${log.type}">${log.message}</span>
+                    </div>`
+                ).join('');
+            }
+            
+            console.log(`[${time}] ${message}`);
+        }
+        
+        function saveAuthData() {
+            if (authData.accessToken) localStorage.setItem('accessToken', authData.accessToken);
+            if (authData.refreshToken) localStorage.setItem('refreshToken', authData.refreshToken);
+            if (authData.userId) localStorage.setItem('userId', authData.userId);
+            if (authData.email) localStorage.setItem('email', authData.email);
+        }
+        
+        function clearAuthData() {
+            authData = { accessToken: null, refreshToken: null, userId: null, email: null };
+            localStorage.removeItem('accessToken');
+            localStorage.removeItem('refreshToken');
+            localStorage.removeItem('userId');
+            localStorage.removeItem('email');
+            updateAuthState();
+            log('Auth data cleared', 'info');
+        }
+        
+        function updateAuthState() {
+            const stateDiv = document.getElementById('authState');
+            if (authData.accessToken) {
+                stateDiv.innerHTML = `
+                    <strong>Active Session:</strong><br>
+                    Email: ${authData.email || 'N/A'}<br>
+                    User ID: ${authData.userId || 'N/A'}<br>
+                    Token: ${authData.accessToken ? '✅ Present' : '❌ Missing'}<br>
+                    Refresh Token: ${authData.refreshToken ? '✅ Present' : '❌ Missing'}
+                `;
+            } else {
+                stateDiv.innerHTML = '<em>No active session. Please login first.</em>';
+            }
+        }
+        
+        // Замените функцию makeRequest на эту:
+async function makeRequest(url, method = 'GET', data = null) {
+    log(`➡️ ${method} ${url}`, 'info');
+    
+    const headers = {
+        'Content-Type': 'application/json',
+        // Добавляем Origin header для CORS
+        'Origin': window.location.origin || 'http://localhost:8000'
+    };
+    
+    if (authData.accessToken) {
+        headers['Authorization'] = `Bearer ${authData.accessToken}`;
+    }
+    
+    // Для OPTIONS preflight запросов
+    if (method !== 'GET' && method !== 'HEAD') {
+        headers['Access-Control-Request-Method'] = method;
+        headers['Access-Control-Request-Headers'] = 'Content-Type, Authorization';
+    }
+    
+    try {
+        const startTime = Date.now();
+        const options = {
+            method,
+            headers,
+            mode: 'cors',  // Явно указываем CORS режим
+            credentials: 'include'  // Включаем credentials для CORS
+        };
+        
+        if (data && (method === 'POST' || method === 'PUT' || method === 'PATCH')) {
+            options.body = JSON.stringify(data);
+        }
+        
+        const response = await fetch(url, options);
+        const responseTime = Date.now() - startTime;
+        
+        let result;
+        try {
+            result = await response.json();
+        } catch {
+            result = { text: await response.text() };
+        }
+        
+        if (response.ok) {
+            log(`✅ ${method} ${url} - ${response.status} (${responseTime}ms)`, 'success');
+        } else {
+            log(`❌ ${method} ${url} - ${response.status} (${responseTime}ms)`, 'error');
+        }
+        
+        return {
+            status: response.status,
+            ok: response.ok,
+            data: result,
+            responseTime
+        };
+        
+    } catch (error) {
+        log(`💥 ${method} ${url} - Error: ${error.message}`, 'error');
+        return {
+            status: 0,
+            ok: false,
+            data: { error: error.message, details: error.toString() }
+        };
+    }
+}
+        
+        function updateConnectionStatus(connected) {
+            const statusDiv = document.getElementById('connectionStatus');
+            if (connected) {
+                statusDiv.className = 'connection-status connected';
+                statusDiv.textContent = 'Connected';
+            } else {
+                statusDiv.className = 'connection-status disconnected';
+                statusDiv.textContent = 'Disconnected';
+            }
+        }
+        
+        function displayResult(elementId, result, title = '') {
+            const element = document.getElementById(elementId);
+            const titleHtml = title ? `<strong>${title}</strong><br>` : '';
+            
+            if (typeof result === 'string') {
+                element.innerHTML = `${titleHtml}<pre>${result}</pre>`;
+            } else {
+                element.innerHTML = `${titleHtml}<pre>${JSON.stringify(result, null, 2)}</pre>`;
+            }
+            
+            return element;
+        }
+        
+        // ================= TEST FUNCTIONS =================
+        async function testEndpoint(endpoint, resultId) {
+            const result = await makeRequest(GATEWAY_URL + endpoint, 'GET');
+            displayResult(resultId, result.data, `${endpoint} (${result.status} - ${result.responseTime}ms)`);
+            updateConnectionStatus(result.ok);
+            return result;
+        }
+        
+        async function testDirect(url, resultId) {
+            const result = await makeRequest(url, 'GET');
+            displayResult(resultId, result.data, `${url} (${result.status} - ${result.responseTime}ms)`);
+            return result;
+        }
+        
+        async function testAllGatewayEndpoints() {
+            const endpoints = [
+                '/health',
+                '/status',
+                '/',
+                '/api/',
+                '/api/auth/health',
+                '/api/users/health'
+            ];
+            
+            const results = [];
+            for (const endpoint of endpoints) {
+                const result = await makeRequest(GATEWAY_URL + endpoint, 'GET');
+                results.push({
+                    endpoint,
+                    status: result.ok ? '✅ OK' : '❌ FAILED',
+                    code: result.status,
+                    time: result.responseTime + 'ms',
+                    data: result.data
+                });
+            }
+            
+            displayResult('gatewayResult', results, 'All Gateway Endpoints Test');
+        }
+        
+        async function testAllServices() {
+            const services = [
+                { name: 'API Gateway /health', url: GATEWAY_URL + '/health' },
+                { name: 'Auth Service via Gateway', url: GATEWAY_URL + '/api/auth/health' },
+                { name: 'Auth Service Direct', url: AUTH_DIRECT_URL + '/health' },
+                { name: 'User Service via Gateway', url: GATEWAY_URL + '/api/users/health' },
+                { name: 'User Service Direct', url: USER_DIRECT_URL + '/health' },
+                { name: 'BFF via Gateway', url: GATEWAY_URL + '/api/health' },
+                { name: 'BFF Direct', url: BFF_DIRECT_URL + '/health' },
+                { name: 'Frontend', url: FRONTEND_URL }
+            ];
+            
+            const results = [];
+            for (const service of services) {
+                const result = await makeRequest(service.url, 'GET');
+                results.push({
+                    service: service.name,
+                    url: service.url,
+                    status: result.ok ? '✅ OK' : '❌ FAILED',
+                    code: result.status,
+                    time: result.responseTime + 'ms'
+                });
+            }
+            
+            displayResult('bulkResult', results, 'All Services Test');
+        }
+        
+        // ================= AUTH FUNCTIONS =================
+        async function register() {
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            const username = document.getElementById('regUsername').value;
+            
+            const data = { email, password };
+            if (username) data.username = username;
+            
+            const result = await makeRequest(GATEWAY_URL + '/api/auth/register', 'POST', data);
+            
+            if (result.ok && result.data.data) {
+                authData = {
+                    accessToken: result.data.data.accessToken,
+                    refreshToken: result.data.data.refreshToken,
+                    userId: result.data.data.userId,
+                    email: result.data.data.email
+                };
+                saveAuthData();
+                updateAuthState();
+                log(`✅ User registered: ${email}`, 'success');
+            }
+            
+            displayResult('registerResult', result.data, 'Registration Result');
+        }
+        
+        async function login() {
+            const data = {
+                email: 'test@example.com',
+                password: 'Test123!@#'
+            };
+            
+            const result = await makeRequest(GATEWAY_URL + '/api/auth/login', 'POST', data);
+            
+            if (result.ok && result.data.data) {
+                authData = {
+                    accessToken: result.data.data.accessToken,
+                    refreshToken: result.data.data.refreshToken,
+                    userId: result.data.data.userId,
+                    email: result.data.data.email
+                };
+                saveAuthData();
+                updateAuthState();
+                log(`✅ User logged in: ${authData.email}`, 'success');
+            }
+            
+            displayResult('loginResult', result.data, 'Login Result');
+        }
+        
+        async function loginWithCustom() {
+            const email = prompt('Enter email:', 'test@example.com');
+            const password = prompt('Enter password:', 'Test123!@#');
+            
+            if (!email || !password) return;
+            
+            const data = { email, password };
+            const result = await makeRequest(GATEWAY_URL + '/api/auth/login', 'POST', data);
+            
+            if (result.ok && result.data.data) {
+                authData = {
+                    accessToken: result.data.data.accessToken,
+                    refreshToken: result.data.data.refreshToken,
+                    userId: result.data.data.userId,
+                    email: result.data.data.email
+                };
+                saveAuthData();
+                updateAuthState();
+                log(`✅ User logged in: ${authData.email}`, 'success');
+            }
+            
+            displayResult('loginResult', result.data, 'Login Result');
+        }
+        
+        async function verifyToken() {
+            if (!authData.accessToken) {
+                displayResult('loginResult', { error: 'No token available. Please login first.' }, 'Token Verification');
+                return;
+            }
+            
+            const result = await makeRequest(GATEWAY_URL + '/api/auth/verify', 'GET');
+            displayResult('loginResult', result.data, 'Token Verification');
+        }
+        
+        async function refreshToken() {
+            if (!authData.refreshToken) {
+                alert('No refresh token available. Please login first.');
+                return;
+            }
+            
+            const data = { refreshToken: authData.refreshToken };
+            const result = await makeRequest(GATEWAY_URL + '/api/auth/refresh-token', 'POST', data);
+            
+            if (result.ok && result.data.data) {
+                authData.accessToken = result.data.data.accessToken;
+                authData.refreshToken = result.data.data.refreshToken;
+                saveAuthData();
+                updateAuthState();
+                log('✅ Token refreshed successfully', 'success');
+            }
+            
+            displayResult('loginResult', result.data, 'Token Refresh');
+        }
+        
+        async function logout() {
+            if (!authData.refreshToken) {
+                alert('No active session');
+                return;
+            }
+            
+            const data = { refreshToken: authData.refreshToken };
+            const result = await makeRequest(GATEWAY_URL + '/api/auth/logout', 'POST', data);
+            
+            if (result.ok) {
+                clearAuthData();
+                log('✅ Logged out successfully', 'success');
+            }
+            
+            displayResult('loginResult', result.data, 'Logout');
+        }
+        
+        async function getProfile() {
+            if (!authData.userId) {
+                alert('Please login first');
+                return;
+            }
+            
+            const result = await makeRequest(GATEWAY_URL + `/api/auth/profile/${authData.userId}`, 'GET');
+            displayResult('loginResult', result.data, 'User Profile');
+        }
+        
+        async function testRegistrationFlow() {
+            log('🧪 Starting registration flow test...', 'info');
+            
+            // 1. Register
+            const email = `test_${Date.now()}@example.com`;
+            const registerData = {
+                email: email,
+                password: 'Test123!@#',
+                username: `user_${Date.now()}`
+            };
+            
+            const registerResult = await makeRequest(GATEWAY_URL + '/api/auth/register', 'POST', registerData);
+            
+            if (registerResult.ok) {
+                log(`✅ Registration successful: ${email}`, 'success');
+                
+                // 2. Login with registered user
+                const loginData = { email, password: 'Test123!@#' };
+                const loginResult = await makeRequest(GATEWAY_URL + '/api/auth/login', 'POST', loginData);
+                
+                if (loginResult.ok) {
+                    log('✅ Login successful after registration', 'success');
+                    
+                    // 3. Verify token
+                    const verifyResult = await makeRequest(GATEWAY_URL + '/api/auth/verify', 'GET');
+                    
+                    const testResults = {
+                        registration: registerResult.data,
+                        login: loginResult.data,
+                        tokenVerification: verifyResult.data
+                    };
+                    
+                    displayResult('registerResult', testResults, 'Complete Registration Flow Test');
+                }
+            } else {
+                displayResult('registerResult', registerResult.data, 'Registration Test Failed');
+            }
+        }
+        
+        // ================= MONITORING FUNCTIONS =================
+        async function checkSystemStatus() {
+            const status = {
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent,
+                online: navigator.onLine,
+                gatewayUrl: GATEWAY_URL,
+                authData: {
+                    hasToken: !!authData.accessToken,
+                    userId: authData.userId,
+                    email: authData.email
+                }
+            };
+            
+            displayResult('monitoringResult', status, 'System Status');
+        }
+        
+        async function checkPorts() {
+            // This would require a backend endpoint
+            displayResult('monitoringResult', {
+                message: 'Port checking requires backend service',
+                commonPorts: [
+                    { port: 8080, service: 'API Gateway' },
+                    { port: 3001, service: 'Auth Service' },
+                    { port: 3002, service: 'User Service' },
+                    { port: 3003, service: 'BFF Gateway' },
+                    { port: 5173, service: 'Frontend' },
+                    { port: 5432, service: 'Postgres Auth' },
+                    { port: 5433, service: 'Postgres User' },
+                    { port: 8081, service: 'Kafka UI' }
+                ]
+            }, 'Port Information');
+        }
+        
+        async function checkContainers() {
+            displayResult('monitoringResult', {
+                message: 'Use terminal command: docker ps',
+                command: 'docker ps --format "table {{.Names}}\\t{{.Status}}\\t{{.Ports}}"'
+            }, 'Container Status');
+        }
+        
+        function showConfig() {
+            const config = {
+                gatewayUrl: GATEWAY_URL,
+                authDirectUrl: AUTH_DIRECT_URL,
+                userDirectUrl: USER_DIRECT_URL,
+                bffDirectUrl: BFF_DIRECT_URL,
+                frontendUrl: FRONTEND_URL,
+                authData: authData,
+                logsCount: logs.length
+            };
+            
+            displayResult('monitoringResult', config, 'Current Configuration');
+        }
+        
+        function exportLogs() {
+            const logText = logs.map(log => `[${log.time}] ${log.message}`).join('\n');
+            const blob = new Blob([logText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `test-logs-${new Date().toISOString().split('T')[0]}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            log('Logs exported', 'info');
+        }
+        
+        function clearLogs() {
+            if (confirm('Clear all logs?')) {
+                logs = [];
+                localStorage.removeItem('testLogs');
+                document.getElementById('activityLogs').innerHTML = '';
+                log('Logs cleared', 'info');
+            }
+        }
+        
+        // ================= TAB MANAGEMENT =================
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName + 'Tab').classList.add('active');
+            
+            // Activate tab button
+            event.target.classList.add('active');
+            
+            log(`Switched to ${tabName} tab`, 'info');
+        }
+        
+        // ================= INITIALIZATION =================
+        window.onload = function() {
+            log('🚀 Platform Ecosystem Test Panel loaded', 'success');
+            log(`Gateway URL: ${GATEWAY_URL}`, 'info');
+            log(`Auth Direct URL: ${AUTH_DIRECT_URL}`, 'info');
+            
+            updateAuthState();
+            
+            // Load existing logs
+            const logsDiv = document.getElementById('activityLogs');
+            if (logsDiv && logs.length > 0) {
+                logsDiv.innerHTML = logs.map(log => 
+                    `<div class="log-entry">
+                        <span class="log-time">${log.time}</span>
+                        <span class="log-${log.type}">${log.message}</span>
+                    </div>`
+                ).join('');
+            }
+            
+            // Auto-test on load
+            setTimeout(() => {
+                testEndpoint('/health', 'gatewayResult');
+            }, 1000);
+        };
+    </script>
+</body>
+</html>
