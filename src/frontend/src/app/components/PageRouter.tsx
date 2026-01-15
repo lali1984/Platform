@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 
 // Ленивая загрузка страниц для оптимизации
-const NewsPage = lazy(() => import('./pages/news'));
+const NewsPage = lazy(() => import('./pages/News'));
 const KnowledgePage = lazy(() => import('./pages/Knowledge'));
 const EducationPage = lazy(() => import('./pages/Education'));
 const PartnershipPage = lazy(() => import('./pages/Partnership'));

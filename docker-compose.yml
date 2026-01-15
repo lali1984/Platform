@@ -1,4 +1,3 @@
-version: '3.8'  # ⬅️ ДОБАВИТЬ В НАЧАЛО
 
 services:
   # Базы данных
@@ -182,11 +181,11 @@ services:
     command: npm run dev
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "npm", "run", "health"]
+      test: ["CMD", "node", "-e", "const http = require('http'); http.get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1); }).on('error', () => process.exit(1));"]
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 40s  # Дать время для запуска приложения
+      start_period: 40s #Дать время для запуска приложения
 
   user-service:
     build: ./src/user-service

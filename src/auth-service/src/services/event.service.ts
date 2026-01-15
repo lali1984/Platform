@@ -6,7 +6,7 @@ import {
   EventType,
   createBaseEvent,
   generateCorrelationId
-} from '../shared/events/src';
+} from '../shared-stub';
 
 export class EventService {
   private static instance: EventService;

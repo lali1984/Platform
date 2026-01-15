@@ -3,10 +3,8 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Копируем package.json и tsconfig
-COPY package.json ./
-COPY tsconfig.json ./
-COPY package-lock.json ./
-COPY index.js ./
+COPY package*.json ./
+
 
 
 
@@ -15,7 +13,7 @@ RUN npm install
 
 
 # Копируем исходный код
-COPY src ./src
+COPY . .
 
 
 # Собираем TypeScript

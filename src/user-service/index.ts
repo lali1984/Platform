@@ -13,6 +13,11 @@ app.get('/health', (req, res) => {
   });
 });
 
+
+import { kafkaClient } from '@platform/shared-kafka';
+
+console.log('Kafka client:', kafkaClient);
+
 app.listen(PORT, () => {
   console.log(`User Service running on port ${PORT}`);
 });

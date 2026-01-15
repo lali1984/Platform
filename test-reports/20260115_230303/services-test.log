@@ -1,0 +1,1 @@
+scripts/run-full-test-suite.sh: line 20: ../scripts/test-all-services.sh: No such file or directory

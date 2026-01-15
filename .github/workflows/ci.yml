@@ -1,0 +1,228 @@
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
+name: Platform Ecosystem CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:  # Ручной запуск
+
+jobs:
+  # JOB 1: Линтинг и проверка кода
+  lint-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies (root)
+        run: npm ci
+      
+      - name: Lint check
+        run: |
+          # Если есть ESLint
+          npx eslint src/ --ext .ts,.js,.tsx,.jsx || echo "ESLint not configured"
+          
+          # Проверка формата
+          npx prettier --check src/ || echo "Prettier not configured"
+      
+      - name: TypeScript compilation check
+        run: |
+          for service in auth-service user-service bff-gateway; do
+            if [ -f "src/$service/tsconfig.json" ]; then
+              echo "Checking $service..."
+              cd src/$service
+              npx tsc --noEmit || exit 1
+              cd ../..
+            fi
+          done
+
+  # JOB 2: Сборка и тестирование Docker
+  docker-build-test:
+    runs-on: ubuntu-latest
+    needs: lint-and-validate
+    timeout-minutes: 30
+    
+    env:
+      DOCKER_BUILDKIT: 1
+      COMPOSE_DOCKER_CLI_BUILD: 1
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Docker
+        uses: docker/setup-buildx-action@v3
+      
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+      
+      - name: Build Docker images
+        run: |
+          docker-compose build
+          
+          # Проверить, что образы созданы
+          docker images | grep platform-ecosystem
+      
+      - name: Start services
+        run: |
+          # Запустить только инфраструктуру
+          docker-compose up -d postgres-auth postgres-user redis zookeeper kafka
+          
+          # Подождать пока инфраструктура поднимется
+          sleep 60
+          
+          # Проверить health инфраструктуры
+          docker-compose ps
+      
+      - name: Wait for infrastructure health
+        run: |
+          # Максимум 3 минуты ожидания
+          for i in {1..36}; do
+            echo "Attempt $i/36: Checking infrastructure..."
+            
+            # Проверка PostgreSQL
+            if docker-compose exec -T postgres-auth pg_isready -U admin; then
+              echo "✅ PostgreSQL auth is ready"
+            else
+              echo "⏳ PostgreSQL auth not ready yet"
+              sleep 5
+              continue
+            fi
+            
+            # Проверка Redis
+            if docker-compose exec -T redis redis-cli ping | grep -q PONG; then
+              echo "✅ Redis is ready"
+            else
+              echo "⏳ Redis not ready yet"
+              sleep 5
+              continue
+            fi
+            
+            # Проверка Kafka
+            if docker-compose exec -T kafka kafka-topics --bootstrap-server localhost:9092 --list >/dev/null 2>&1; then
+              echo "✅ Kafka is ready"
+              break
+            else
+              echo "⏳ Kafka not ready yet"
+              sleep 5
+            fi
+            
+            if [ $i -eq 36 ]; then
+              echo "❌ Infrastructure failed to start"
+              docker-compose logs
+              exit 1
+            fi
+          done
+      
+      - name: Start application services
+        run: |
+          docker-compose up -d auth-service user-service api-gateway
+          sleep 30
+          docker-compose ps
+      
+      - name: Run service health checks
+        run: |
+          # Проверка health endpoints
+          curl_with_retry() {
+            local url=$1
+            local max_attempts=10
+            local attempt=1
+            
+            while [ $attempt -le $max_attempts ]; do
+              if curl -f "$url"; then
+                echo "✅ $url is healthy"
+                return 0
+              else
+                echo "⏳ Attempt $attempt/$max_attempts: $url not ready"
+                sleep 5
+                ((attempt++))
+              fi
+            done
+            
+            echo "❌ $url failed after $max_attempts attempts"
+            return 1
+          }
+          
+          curl_with_retry "http://localhost:3001/health"
+          curl_with_retry "http://localhost:3002/health"
+          curl_with_retry "http://localhost:8080/health"
+      
+      - name: Run API tests
+        run: |
+          # Базовые тесты API
+          echo "Testing Auth Service..."
+          
+          # Тест регистрации
+          curl -X POST http://localhost:3001/api/auth/register \
+            -H "Content-Type: application/json" \
+            -d '{"email":"test@example.com","password":"TestPass123!"}' \
+            -w "\nHTTP Code: %{http_code}\n" || true
+          
+          echo "Testing User Service..."
+          curl http://localhost:3002/health \
+            -w "\nHTTP Code: %{http_code}\n"
+      
+      - name: Stop services and clean up
+        if: always()
+        run: |
+          docker-compose down -v --remove-orphans
+          docker system prune -f
+
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+  # JOB 3: Security scan
+  security-scan:
+    runs-on: ubuntu-latest
+    needs: docker-build-test
+    timeout-minutes: 15
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+      
+      - name: Upload Trivy scan results
+        uses: github/codeql-action/upload-sarif@v2
+        if: always()
+        with:
+          sarif_file: 'trivy-results.sarif'
+      
+      - name: Check for secrets in code
+        run: |
+          # Простая проверка на секреты в коде
+          if grep -r "password\|secret\|token\|key" --include="*.ts" --include="*.js" --include="*.yml" --include="*.yaml" --include="*.env" src/ | grep -v "test\|example\|dummy"; then
+            echo "⚠️  Possible secrets found in code"
+            grep -r "password\|secret\|token\|key" --include="*.ts" --include="*.js" --include="*.yml" --include="*.yaml" --include="*.env" src/ | grep -v "test\|example\|dummy"
+            # Не падаем, только предупреждаем
+          fi

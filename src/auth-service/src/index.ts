@@ -39,7 +39,7 @@ app.use(cors({
 
 app.use(express.json());
 // Routes
-app.use('/', authRoutes);
+app.use('/api/auth', authRoutes);
 
 // Enhanced health check with event service status
 app.get('/health', async (req, res) => {
@@ -112,5 +112,6 @@ const shutdown = async () => {
   }
 };
 
+export { app };
 process.on('SIGTERM', shutdown);
 process.on('SIGINT', shutdown);

@@ -13,6 +13,19 @@ app.get('/health', (req, res) => {
   });
 });
 
+
+app.get('/api/test', async (req, res) => {
+  try {
+    // Пример BFF логики - агрегируем данные из разных сервисов
+    res.json({
+      message: 'BFF Gateway is working',
+      services: ['auth', 'users', 'news']
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'BFF error' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`BFF Gateway running on port ${PORT}`);
 });

@@ -12,6 +12,8 @@ export interface User {
 export interface CreateUserDTO {
   email: string;
   password: string;
+  isEmailVerified: boolean;
+  // или is_email_verified: boolean;
 }
 
 export interface LoginDTO {

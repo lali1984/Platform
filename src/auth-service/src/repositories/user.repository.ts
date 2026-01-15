@@ -15,6 +15,32 @@ export class UserRepository {
     return result.rows[0];
   }
 
+  async update(id: string, updateData: Partial<User>): Promise<User | null> {
+    // Собираем поля для обновления
+    const keys = Object.keys(updateData);
+    if (keys.length === 0) {
+      return this.findById(id); // Если нечего обновлять, возвращаем текущие данные
+    }
+    
+    const setClause = keys.map((key, index) => `${key} = $${index + 1}`).join(', ');
+    const values = keys.map(key => (updateData as any)[key]);
+    
+    const query = `
+      UPDATE ${this.tableName} 
+      SET ${setClause}, updated_at = NOW()
+      WHERE id = $${keys.length + 1}
+      RETURNING *
+    `;
+    
+    const result = await pool.query(query, [...values, id]);
+    
+    if (result.rows.length === 0) {
+      return null;
+    }
+    
+    return result.rows[0];
+  }
+  
   async findByEmail(email: string): Promise<User | null> {
     const query = `SELECT * FROM ${this.tableName} WHERE email = $1`;
     const result = await pool.query(query, [email]);

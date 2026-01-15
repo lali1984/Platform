@@ -14,8 +14,16 @@
     "declarationMap": true,
     "sourceMap": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+   
+    "baseUrl": ".",
+    "paths": {
+      "@platform/shared/*": ["../../shared/*/src"],
+      "@platform/events": ["../../shared/events/src/index"],
+      "@platform/shared-events": ["../../shared/events/src"]
+    
+  }
   },
-  "include": ["src/**/*"],
+   "include": ["src/**/*", "shared-stub.ts"], 
   "exclude": ["node_modules", "dist"]
 }
