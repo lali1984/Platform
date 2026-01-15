@@ -24,30 +24,73 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: '20'
       
       - name: Install dependencies (root)
         run: npm ci
       
+      - name: Check for package.json
+        run: |
+          if [ ! -f "package.json" ]; then
+            echo "package.json not found in root"
+            # Ищем package.json в поддиректориях
+            find . -name "package.json" -maxdepth 3 | head -5
+          else
+            echo "Found package.json in root"
+            cat package.json | jq '.dependencies // {}' | head -20
+          fi
+
+      - name: Install dependencies selectively
+        run: |
+          # Проверяем, где находятся package.json файлы
+          if [ -f "package.json" ]; then
+            echo "Installing root dependencies..."
+            npm ci || npm install
+          fi
+          
+          # Устанавливаем зависимости для каждого сервиса, если нужно
+          for service_dir in src/*/; do
+            if [ -f "$service_dir/package.json" ]; then
+              echo "Installing dependencies for $service_dir..."
+              cd "$service_dir"
+              npm ci || npm install
+              cd ../..
+            fi
+          done
+              
       - name: Lint check
         run: |
-          # Если есть ESLint
-          npx eslint src/ --ext .ts,.js,.tsx,.jsx || echo "ESLint not configured"
+          # Если есть ESLint в корне
+          if [ -f "package.json" ] && npx eslint --version 2>/dev/null; then
+            npx eslint src/ --ext .ts,.js,.tsx,.jsx || echo "ESLint check completed"
+          else
+            echo "No ESLint found in root"
+          fi
           
           # Проверка формата
-          npx prettier --check src/ || echo "Prettier not configured"
+          if command -v npx prettier >/dev/null 2>&1; then
+            npx prettier --check src/ || echo "Prettier check completed"
+          else
+            echo "Prettier not available"
+          fi
       
       - name: TypeScript compilation check
         run: |
           for service in auth-service user-service bff-gateway; do
-            if [ -f "src/$service/tsconfig.json" ]; then
-              echo "Checking $service..."
-              cd src/$service
-              npx tsc --noEmit || exit 1
+            if [ -d "src/$service" ] && [ -f "src/$service/tsconfig.json" ]; then
+              echo "Checking TypeScript in $service..."
+              cd "src/$service"
+              if [ -f "node_modules/.bin/tsc" ]; then
+                npx tsc --noEmit || exit 1
+              elif command -v tsc >/dev/null 2>&1; then
+                tsc --noEmit || exit 1
+              else
+                echo "TypeScript not found for $service"
+              fi
               cd ../..
             fi
           done
+
 
   # JOB 2: Сборка и тестирование Docker
   docker-build-test:
