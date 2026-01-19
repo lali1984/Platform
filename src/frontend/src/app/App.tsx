@@ -1,3 +1,4 @@
+// Добавить импорт AuthProvider
 import { useState } from 'react';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
@@ -6,6 +7,8 @@ import { Footer } from './components/Footer';
 import { ContentArea } from './components/ContentArea';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
+import { AuthProvider } from './context/AuthContext'; // ← ДОБАВИТЬ импорт
+import { Toaster } from 'sonner'; // ← ДОБАВИТЬ для уведомлений
 
 function AppContent() {
   const [activeSection, setActiveSection] = useState('news');
@@ -18,6 +21,14 @@ function AppContent() {
 
   return (
     <div className={`h-screen flex flex-col bg-white dark:bg-gray-900 ${themeMode === 'dark' ? 'dark' : ''}`}>
+      {/* Toaster для уведомлений - ДОБАВИТЬ */}
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          className: 'dark:bg-gray-800 dark:text-white',
+        }}
+      />
+      
       <Header onMenuClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)} />
       
       <div className="flex-1 flex overflow-hidden relative">
@@ -91,7 +102,9 @@ function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <AppContent />
+        <AuthProvider> {/* ← ОБЕРНУТЬ AppContent в AuthProvider */}
+          <AppContent />
+        </AuthProvider>
       </LanguageProvider>
     </ThemeProvider>
   );

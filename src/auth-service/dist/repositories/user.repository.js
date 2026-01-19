@@ -1,56 +1,96 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserRepository = void 0;
-const database_1 = __importDefault(require("../config/database"));
+const database_typeorm_1 = require("../config/database-typeorm"); // Нужно создать
+const User_1 = require("../entities/User");
 class UserRepository {
     constructor() {
-        this.tableName = 'users';
+        this.repository = database_typeorm_1.AppDataSource.getRepository(User_1.UserEntity);
     }
     async create(userData) {
-        const query = `
-      INSERT INTO ${this.tableName} (email, password_hash)
-      VALUES ($1, $2)
-      RETURNING *
-    `;
-        const result = await database_1.default.query(query, [userData.email, userData.password]);
-        return result.rows[0];
+        const user = this.repository.create({
+            email: userData.email,
+            passwordHash: userData.password, // @BeforeInsert автоматически хеширует
+            isEmailVerified: false,
+            isActive: true,
+            isTwoFactorEnabled: false
+        });
+        return await this.repository.save(user);
+    }
+    async createWithPassword(userData) {
+        const user = new User_1.UserEntity();
+        user.email = userData.email;
+        await user.setPassword(userData.password); // Используем метод setPassword
+        user.isEmailVerified = false;
+        user.isActive = true;
+        user.isTwoFactorEnabled = false;
+        return await this.repository.save(user);
     }
     async findByEmail(email) {
-        const query = `SELECT * FROM ${this.tableName} WHERE email = $1`;
-        const result = await database_1.default.query(query, [email]);
-        if (result.rows.length === 0) {
-            return null;
-        }
-        return result.rows[0];
+        return await this.repository.findOne({
+            where: { email }
+        });
     }
     async findById(id) {
-        const query = `SELECT * FROM ${this.tableName} WHERE id = $1`;
-        const result = await database_1.default.query(query, [id]);
-        if (result.rows.length === 0) {
-            return null;
-        }
-        return result.rows[0];
+        return await this.repository.findOne({
+            where: { id }
+        });
+    }
+    async update(id, updateData) {
+        await this.repository.update(id, {
+            ...updateData,
+            updatedAt: new Date()
+        });
+        return this.findById(id);
+    }
+    async updatePassword(id, newPasswordHash) {
+        await this.repository.update(id, {
+            passwordHash: newPasswordHash,
+            updatedAt: new Date()
+        });
     }
     async updateTwoFactorSecret(userId, secret) {
-        const query = `
-      UPDATE ${this.tableName} 
-      SET two_factor_secret = $1, two_factor_enabled = true, updated_at = NOW()
-      WHERE id = $2
-    `;
-        await database_1.default.query(query, [secret, userId]);
+        await this.repository.update(userId, {
+            twoFactorSecret: secret,
+            isTwoFactorEnabled: true,
+            updatedAt: new Date()
+        });
     }
     async disableTwoFactor(userId) {
-        const query = `
-      UPDATE ${this.tableName} 
-      SET two_factor_secret = NULL, two_factor_enabled = false, updated_at = NOW()
-      WHERE id = $1
-    `;
-        await database_1.default.query(query, [userId]);
+        await this.repository.update(userId, {
+            twoFactorSecret: () => 'NULL',
+            isTwoFactorEnabled: false,
+            updatedAt: new Date()
+        });
+    }
+    async markEmailAsVerified(userId) {
+        await this.repository.update(userId, {
+            isEmailVerified: true,
+            updatedAt: new Date()
+        });
+    }
+    async setResetPasswordToken(userId, token, expiresAt) {
+        await this.repository.update(userId, {
+            resetPasswordToken: token,
+            resetPasswordExpires: expiresAt,
+            updatedAt: new Date()
+        });
+    }
+    async clearResetPasswordToken(userId) {
+        await this.repository.update(userId, {
+            resetPasswordToken: () => 'NULL',
+            resetPasswordExpires: () => 'NULL',
+            updatedAt: new Date()
+        });
+    }
+    async deactivateUser(userId) {
+        await this.repository.update(userId, {
+            isActive: false,
+            updatedAt: new Date()
+        });
     }
 }
 exports.UserRepository = UserRepository;
+// Экспортируем синглтон
 exports.default = new UserRepository();
 //# sourceMappingURL=user.repository.js.map

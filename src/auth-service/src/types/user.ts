@@ -12,11 +12,12 @@ export interface User {
 export interface CreateUserDTO {
   email: string;
   password: string;
-  isEmailVerified: boolean;
-  // или is_email_verified: boolean;
+  username?: string;
+  firstName?: string;
+  lastName?: string;
 }
 
-export interface LoginDTO {
+export interface LoginDto {
   email: string;
   password: string;
 }

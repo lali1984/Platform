@@ -1,29 +1,41 @@
 "use strict";
-// import { Router } from 'express';
-// import authController from '../controllers/auth.controller';
 Object.defineProperty(exports, "__esModule", { value: true });
-// const router = Router();
-// // Public routes
-// router.post('/register', authController.register.bind(authController));
-// router.post('/login', authController.login.bind(authController));
-// router.post('/2fa/generate', authController.generate2FA.bind(authController));
-// router.post('/2fa/verify', authController.verify2FA.bind(authController));
-// router.post('/refresh-token', authController.refreshToken.bind(authController));
-// router.get('/health', authController.healthCheck.bind(authController));
-// export default router;
 const express_1 = require("express");
-const auth_controller_1 = require("../controllers/auth.controller");
 const router = (0, express_1.Router)();
-const authController = new auth_controller_1.AuthController();
-// Основные маршруты
-router.post('/register', authController.register.bind(authController));
-router.post('/login', authController.login.bind(authController));
-// 2FA Маршруты
-router.post('/2fa/generate', authController.generate2FA.bind(authController));
-router.post('/2fa/verify', authController.verify2FA.bind(authController));
-// Токены
-router.post('/refresh-token', authController.refreshToken.bind(authController));
-// Health check
-router.get('/health', authController.healthCheck.bind(authController));
+// Простые заглушки для тестирования
+router.post('/register', (req, res) => {
+    res.status(201).json({
+        message: 'User registered (stub)',
+        user: {
+            id: 'stub-id',
+            email: req.body.email || 'test@example.com'
+        }
+    });
+});
+router.get('/health', (req, res) => {
+    res.json({
+        status: 'ok',
+        service: 'auth-service',
+        timestamp: new Date().toISOString(),
+        path: '/api/auth/health'
+    });
+});
+router.post('/login', (req, res) => {
+    res.json({
+        message: 'Login successful (stub)',
+        accessToken: 'stub-jwt-token',
+        refreshToken: 'stub-refresh-token'
+    });
+});
+router.post('/refresh-token', (req, res) => {
+    res.json({
+        message: 'Token refreshed (stub)',
+        accessToken: 'stub-new-jwt-token',
+        refreshToken: 'stub-new-refresh-token'
+    });
+});
+router.post('/logout', (req, res) => {
+    res.json({ message: 'Logged out (stub)' });
+});
 exports.default = router;
 //# sourceMappingURL=auth.routes.js.map

@@ -1,87 +1,156 @@
-import pool from '../config/database';
-import { User, CreateUserDTO } from '../types/user';
+import { Repository } from 'typeorm';
+import { AppDataSource } from '../config/database-typeorm';
+import { UserEntity } from '../entities/User';
+import { CreateUserDTO } from '../types/user';
 
 export class UserRepository {
-  private tableName = 'users';
+  private repository: Repository<UserEntity>;
 
-  async create(userData: CreateUserDTO): Promise<User> {
-    const query = `
-      INSERT INTO ${this.tableName} (email, password_hash)
-      VALUES ($1, $2)
-      RETURNING *
-    `;
-    
-    const result = await pool.query(query, [userData.email, userData.password]);
-    return result.rows[0];
+  constructor() {
+    // Создаем репозиторий, но не используем до инициализации
+    this.repository = AppDataSource.getRepository(UserEntity);
   }
 
-  async update(id: string, updateData: Partial<User>): Promise<User | null> {
-    // Собираем поля для обновления
-    const keys = Object.keys(updateData);
-    if (keys.length === 0) {
-      return this.findById(id); // Если нечего обновлять, возвращаем текущие данные
+  // Метод для безопасного получения репозитория с ленивой инициализацией
+  private async getRepository(): Promise<Repository<UserEntity>> {
+    if (!AppDataSource.isInitialized) {
+      console.log('🔄 Инициализация TypeORM DataSource...');
+      try {
+        await AppDataSource.initialize();
+        console.log('✅ TypeORM DataSource инициализирована');
+      } catch (error) {
+        console.error('❌ Ошибка инициализации TypeORM:', error);
+        throw error;
+      }
     }
-    
-    const setClause = keys.map((key, index) => `${key} = $${index + 1}`).join(', ');
-    const values = keys.map(key => (updateData as any)[key]);
-    
-    const query = `
-      UPDATE ${this.tableName} 
-      SET ${setClause}, updated_at = NOW()
-      WHERE id = $${keys.length + 1}
-      RETURNING *
-    `;
-    
-    const result = await pool.query(query, [...values, id]);
-    
-    if (result.rows.length === 0) {
-      return null;
-    }
-    
-    return result.rows[0];
-  }
-  
-  async findByEmail(email: string): Promise<User | null> {
-    const query = `SELECT * FROM ${this.tableName} WHERE email = $1`;
-    const result = await pool.query(query, [email]);
-    
-    if (result.rows.length === 0) {
-      return null;
-    }
-    
-    return result.rows[0];
+    return this.repository;
   }
 
-  async findById(id: string): Promise<User | null> {
-    const query = `SELECT * FROM ${this.tableName} WHERE id = $1`;
-    const result = await pool.query(query, [id]);
-    
-    if (result.rows.length === 0) {
-      return null;
-    }
-    
-    return result.rows[0];
+  async create(userData: CreateUserDTO): Promise<UserEntity> {
+    const repo = await this.getRepository();
+    const user = repo.create({
+      email: userData.email,
+      passwordHash: userData.password,
+      username: userData.username,
+      firstName: userData.firstName,
+      lastName: userData.lastName,
+      isEmailVerified: false,
+      isActive: true,
+      isTwoFactorEnabled: false
+    });
+    return await repo.save(user);
+  }
+
+  async createWithPassword(userData: { 
+    email: string; 
+    password: string;
+    username?: string;
+    firstName?: string;
+    lastName?: string;
+  }): Promise<UserEntity> {
+    const repo = await this.getRepository();
+    const user = new UserEntity();
+    user.email = userData.email;
+    user.username = userData.username;
+    user.firstName = userData.firstName;
+    user.lastName = userData.lastName;
+    await user.setPassword(userData.password);
+    user.isEmailVerified = false;
+    user.isActive = true;
+    user.isTwoFactorEnabled = false;
+    return await repo.save(user);
+  }
+
+  async findByEmail(email: string): Promise<UserEntity | null> {
+    const repo = await this.getRepository();
+    return await repo.findOne({
+      where: { email }
+    });
+  }
+
+  async findByUsername(username: string): Promise<UserEntity | null> {
+    const repo = await this.getRepository();
+    return await repo.findOne({
+      where: { username }
+    });
+  }
+
+  async findById(id: string): Promise<UserEntity | null> {
+    const repo = await this.getRepository();
+    return await repo.findOne({
+      where: { id }
+    });
+  }
+
+  async update(id: string, updateData: Partial<UserEntity>): Promise<UserEntity | null> {
+    const repo = await this.getRepository();
+    await repo.update(id, {
+      ...updateData,
+      updatedAt: new Date()
+    });
+    return this.findById(id);
+  }
+
+  async updatePassword(id: string, newPasswordHash: string): Promise<void> {
+    const repo = await this.getRepository();
+    await repo.update(id, {
+      passwordHash: newPasswordHash,
+      updatedAt: new Date()
+    });
   }
 
   async updateTwoFactorSecret(userId: string, secret: string): Promise<void> {
-    const query = `
-      UPDATE ${this.tableName} 
-      SET two_factor_secret = $1, two_factor_enabled = true, updated_at = NOW()
-      WHERE id = $2
-    `;
-    
-    await pool.query(query, [secret, userId]);
+    const repo = await this.getRepository();
+    await repo.update(userId, {
+      twoFactorSecret: secret,
+      isTwoFactorEnabled: true,
+      updatedAt: new Date()
+    });
   }
 
   async disableTwoFactor(userId: string): Promise<void> {
-    const query = `
-      UPDATE ${this.tableName} 
-      SET two_factor_secret = NULL, two_factor_enabled = false, updated_at = NOW()
-      WHERE id = $1
-    `;
-    
-    await pool.query(query, [userId]);
+    const repo = await this.getRepository();
+    await repo.update(userId, {
+      twoFactorSecret: () => 'NULL',
+      isTwoFactorEnabled: false,
+      updatedAt: new Date()
+    });
+  }
+
+  async markEmailAsVerified(userId: string): Promise<void> {
+    const repo = await this.getRepository();
+    await repo.update(userId, {
+      isEmailVerified: true,
+      updatedAt: new Date()
+    });
+  }
+
+  async setResetPasswordToken(userId: string, token: string, expiresAt: Date): Promise<void> {
+    const repo = await this.getRepository();
+    await repo.update(userId, {
+      resetPasswordToken: token,
+      resetPasswordExpires: expiresAt,
+      updatedAt: new Date()
+    });
+  }
+
+  async clearResetPasswordToken(userId: string): Promise<void> {
+    const repo = await this.getRepository();
+    await repo.update(userId, {
+      resetPasswordToken: () => 'NULL',
+      resetPasswordExpires: () => 'NULL',
+      updatedAt: new Date()
+    });
+  }
+
+  async deactivateUser(userId: string): Promise<void> {
+    const repo = await this.getRepository();
+    await repo.update(userId, {
+      isActive: false,
+      updatedAt: new Date()
+    });
   }
 }
 
+// Экспортируем синглтон
 export default new UserRepository();

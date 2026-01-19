@@ -1,0 +1,25 @@
+{
+  "name": "@platform/events",
+  "version": "0.1.0",
+  "description": "Shared events library for Platform Ecosystem",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "redis": "^4.6.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.10",
+    "@types/redis": "^4.0.11"
+  },
+  "keywords": [
+    "events",
+    "platform",
+    "microservices"
+  ]
+}

@@ -1,5 +1,5 @@
-// src/entities/User.ts
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, BeforeInsert } from 'typeorm';
+// src/entities/User.ts - обновляем
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, BeforeInsert, BeforeUpdate, Index } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 
 @Entity('users')
@@ -8,33 +8,44 @@ export class UserEntity {
   id!: string;
 
   @Column({ unique: true })
+  @Index()
   email!: string;
 
-  @Column()
+  @Column({ unique: true, nullable: true })
+  @Index()
+  username?: string;
+
+  @Column({ name: 'first_name', nullable: true })
+  firstName?: string;
+
+  @Column({ name: 'last_name', nullable: true })
+  lastName?: string;
+
+  @Column({ name: 'password_hash' })
   passwordHash!: string;
 
-  @Column({ default: false })
+  @Column({ name: 'is_email_verified', default: false })
   isEmailVerified!: boolean;
 
-  @Column({ nullable: true })
-  twoFactorSecret?: string; // ⬅️ ? делает необязательным
+  @Column({ name: 'two_factor_secret', nullable: true })
+  twoFactorSecret?: string;
 
-  @Column({ default: false })
+  @Column({ name: 'is_two_factor_enabled', default: false })
   isTwoFactorEnabled!: boolean;
 
-  @Column({ nullable: true })
+  @Column({ name: 'reset_password_token', nullable: true })
   resetPasswordToken?: string;
 
-  @Column({ nullable: true })
+  @Column({ name: 'reset_password_expires', nullable: true })
   resetPasswordExpires?: Date;
 
-  @Column({ default: true })
+  @Column({ name: 'is_active', default: true })
   isActive!: boolean;
 
-  @CreateDateColumn()
+  @CreateDateColumn({ name: 'created_at' })
   createdAt!: Date;
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({ name: 'updated_at' })
   updatedAt!: Date;
 
   // Метод для проверки пароля
@@ -44,9 +55,20 @@ export class UserEntity {
 
   // Хук перед вставкой
   @BeforeInsert()
-  async hashPassword() {
-    if (this.passwordHash && !this.passwordHash.startsWith('$2')) {
+  async hashPasswordOnInsert() {
+    if (this.passwordHash && !this.passwordHash.startsWith('$2b$')) {
       this.passwordHash = await bcrypt.hash(this.passwordHash, 10);
     }
+  }
+
+  // Хук перед обновлением (если обновляется пароль)
+  @BeforeUpdate()
+  async hashPasswordOnUpdate() {
+    // Можно добавить логику если нужно
+  }
+
+  // Вспомогательный метод для установки пароля
+  async setPassword(password: string): Promise<void> {
+    this.passwordHash = await bcrypt.hash(password, 10);
   }
 }

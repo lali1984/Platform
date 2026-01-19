@@ -18,12 +18,13 @@
    
     "baseUrl": ".",
     "paths": {
-      "@platform/shared/*": ["../../shared/*/src"],
-      "@platform/events": ["../../shared/events/src/index"],
-      "@platform/shared-events": ["../../shared/events/src"]
-    
-  }
+      "@/*": ["src/*"],
+      "@platform/kafka": ["../shared/kafka/dist"],
+      "@platform/events": ["../shared/events/dist"],
+      "@platform/kafka/*": ["../shared/kafka/dist/*"],
+      "@platform/events/*": ["../shared/events/dist/*"]
+    }
   },
-   "include": ["src/**/*", "shared-stub.ts"], 
+  "include": ["src/**/*", "shared-stub.ts", "../../../shared/kafka", "../../../shared/events"], 
   "exclude": ["node_modules", "dist"]
 }

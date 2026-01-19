@@ -38,7 +38,7 @@ services:
     networks:
       - app-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin"]
+      test: ["CMD-SHELL", "pg_isready -U admin -d user_db"]  # ← ИСПРАВИТЬ ЗДЕСЬ
       interval: 5s
       timeout: 5s
       retries: 5
@@ -82,29 +82,33 @@ services:
     image: confluentinc/cp-kafka:7.4.0
     container_name: kafka
     depends_on:
-      zookeeper:
-        condition: service_healthy
+     zookeeper:
+      condition: service_healthy
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      # КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ:
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_LOG_RETENTION_HOURS: 168
     ports:
-      - "29092:29092"
+      - "9092:9092"
+      - "9094:9094"  # Дополнительный порт для внешних подключений, если нужно
     networks:
       - app-network
     volumes:
       - kafka_data:/var/lib/kafka/data
     healthcheck:
-      test: ["CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list"]
+      test: ["CMD-SHELL", "kafka-topics --bootstrap-server kafka:9092 --list || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
+      start_period: 60s  # Дайте Kafka больше времени на запуск
     restart: unless-stopped
 
   kafka-ui:
@@ -164,9 +168,12 @@ services:
     environment:
       NODE_ENV: development
       DATABASE_URL: postgresql://admin:secret@postgres-auth:5432/auth_db
+      KAFKA_BROKER: "kafka:9092"
       REDIS_URL: redis://redis:6379
-      JWT_SECRET: your-super-secret-jwt-key-change-in-production
-      JWT_REFRESH_SECRET: your-refresh-secret-change-in-production
+      JWT_ACCESS_SECRET: your-super-secret-access-key-change-in-production
+      JWT_REFRESH_SECRET: your-super-secret-refresh-key-different-from-access
+      JWT_ACCESS_EXPIRES_IN: 15m
+      JWT_REFRESH_EXPIRES_IN: 7d
       PORT: 3000
     volumes:
       - ./src/auth-service:/app
@@ -235,7 +242,8 @@ services:
       - ./src/frontend:/app
       - /app/node_modules
     environment:
-      VITE_API_URL: http://localhost:8080/api
+      VITE_API_URL: http://localhost:8080/api  # Прокси через nginx
+      VITE_AUTH_API_URL: http://localhost:8080/api/auth  # Явно указать auth endpoint
       VITE_WS_URL: ws://localhost:8080
       PORT: 5173
     networks:

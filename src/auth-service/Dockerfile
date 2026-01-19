@@ -2,19 +2,11 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Копируем package.json и tsconfig
-COPY package*.json ./
-
-
-
-
-# Устанавливаем зависимости
-RUN npm install
-
-
 # Копируем исходный код
 COPY . .
 
+# Устанавливаем зависимости
+RUN npm install
 
 # Собираем TypeScript
 RUN npm run build

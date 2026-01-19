@@ -15,11 +15,8 @@ router.post('/enable', authenticateToken, async (req: any, res) => {
     const qrCode = await twoFactorService.generateQRCode(secret, req.user.email);
     
     // Save secret to user (but don't enable yet)
-    // Используем snake_case как в базе данных
-    await userRepository.update(userId, { 
-      two_factor_secret: secret,
-      two_factor_enabled: false // Пока не включаем 2FA
-    });
+    // Используем camelCase как в TypeORM сущности
+    await userRepository.updateTwoFactorSecret(userId, secret);
     
     res.json({
       message: 'Scan QR code with authenticator app',
@@ -38,20 +35,20 @@ router.post('/verify', authenticateToken, async (req: any, res) => {
     const { token } = req.body;
     
     const user = await userRepository.findById(userId);
-    // Проверяем поле two_factor_secret (snake_case)
-    if (!user || !user.two_factor_secret) {
+    // Проверяем поле twoFactorSecret (camelCase)
+    if (!user || !user.twoFactorSecret) {
       return res.status(400).json({ error: '2FA not set up' });
     }
     
-    // Используем two_factor_secret из объекта user
-    const isValid = twoFactorService.verifyToken(user.two_factor_secret, token);
+    // Используем twoFactorSecret из объекта user
+    const isValid = twoFactorService.verifyToken(user.twoFactorSecret, token);
     if (!isValid) {
       return res.status(400).json({ error: 'Invalid token' });
     }
     
-    // Enable 2FA for user
+    // Enable 2FA for user - используем метод update с правильными полями
     await userRepository.update(userId, { 
-      two_factor_enabled: true 
+      isTwoFactorEnabled: true 
     });
     
     res.json({ message: '2FA enabled successfully' });
@@ -69,11 +66,9 @@ router.post('/disable', authenticateToken, async (req: any, res) => {
     const user = await userRepository.findById(userId);
     // ... password verification logic
     // Здесь должна быть реализация проверки пароля
+    // Пример: const isPasswordValid = await verifyPassword(password, user.passwordHash);
     
-    await userRepository.update(userId, {
-      two_factor_enabled: false,
-      two_factor_secret: null
-    });
+    await userRepository.disableTwoFactor(userId);
     
     res.json({ message: '2FA disabled successfully' });
   } catch (error) {
