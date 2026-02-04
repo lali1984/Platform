@@ -1,5 +1,5 @@
-
 services:
+  # ================ ИНФРАСТРУКТУРА ================
   # Базы данных
   postgres-auth:
     image: postgres:15-alpine
@@ -8,20 +8,56 @@ services:
       POSTGRES_DB: auth_db
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: secret
-      POSTGRES_INITDB_ARGS: "--encoding=UTF8"
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=en_US.UTF-8 --lc-collate=en_US.UTF-8 --lc-ctype=en_US.UTF-8"
+
+      # Production PostgreSQL parameters
+      POSTGRES_CONFIG_SHARED_BUFFERS: "256MB"
+      POSTGRES_CONFIG_EFFECTIVE_CACHE_SIZE: "1GB"
+      POSTGRES_CONFIG_WORK_MEM: "4MB"
+      POSTGRES_CONFIG_MAINTENANCE_WORK_MEM: "64MB"
+      POSTGRES_CONFIG_MAX_CONNECTIONS: "100"
+      POSTGRES_CONFIG_STATEMENT_TIMEOUT: "30s"
+      POSTGRES_CONFIG_IDLE_IN_TRANSACTION_SESSION_TIMEOUT: "60s"
+      POSTGRES_CONFIG_LOG_MIN_DURATION_STATEMENT: "1000"
+      POSTGRES_CONFIG_LOG_STATEMENT: "none"
+      POSTGRES_CONFIG_LOG_CONNECTIONS: "off"
+      POSTGRES_CONFIG_LOG_DISCONNECTIONS: "off"
+    command: >
+      postgres
+      -c shared_buffers=${POSTGRES_CONFIG_SHARED_BUFFERS}
+      -c effective_cache_size=${POSTGRES_CONFIG_EFFECTIVE_CACHE_SIZE}
+      -c work_mem=${POSTGRES_CONFIG_WORK_MEM}
+      -c max_connections=${POSTGRES_CONFIG_MAX_CONNECTIONS}
+      -c statement_timeout=${POSTGRES_CONFIG_STATEMENT_TIMEOUT}
+      -c idle_in_transaction_session_timeout=${POSTGRES_CONFIG_IDLE_IN_TRANSACTION_SESSION_TIMEOUT}
+      -c log_min_duration_statement=${POSTGRES_CONFIG_LOG_MIN_DURATION_STATEMENT}
+      -c wal_level=replica
+      -c max_wal_size=1GB
+      -c checkpoint_completion_target=0.9
+      -c random_page_cost=1.1
     ports:
-      - "5432:5432"
+      - "${POSTGRES_AUTH_PORT:-5432}:5432"
     volumes:
       - postgres_auth_data:/var/lib/postgresql/data
-      - ./configs/postgres/init-auth.sql:/docker-entrypoint-initdb.d/init-auth.sql:ro
+      - ./00_infrastructure/databases/postgres/init-auth.sql:/docker-entrypoint-initdb.d/01-init-auth.sql:ro
+      - ./00_infrastructure/databases/postgres/create-db-users.sql:/docker-entrypoint-initdb.d/02-create-users.sql:ro
     networks:
-      - app-network
+      - platform-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d auth_db"]
+      test: ["CMD-SHELL", "pg_isready -U postgres_admin -d auth_db"]
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 30s
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
 
   postgres-user:
     image: postgres:15-alpine
@@ -30,37 +66,68 @@ services:
       POSTGRES_DB: user_db
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: secret
+      
+      # Same production parameters
+      POSTGRES_CONFIG_SHARED_BUFFERS: "256MB"
+      POSTGRES_CONFIG_EFFECTIVE_CACHE_SIZE: "1GB"
+      POSTGRES_CONFIG_WORK_MEM: "4MB"
+      POSTGRES_CONFIG_MAX_CONNECTIONS: "100"
+      POSTGRES_CONFIG_STATEMENT_TIMEOUT: "30s"
+    command: >
+      postgres
+      -c shared_buffers=${POSTGRES_CONFIG_SHARED_BUFFERS}
+
+      -c effective_cache_size=${POSTGRES_CONFIG_EFFECTIVE_CACHE_SIZE}
+
+      -c work_mem=${POSTGRES_CONFIG_WORK_MEM}
+
+      -c max_connections=${POSTGRES_CONFIG_MAX_CONNECTIONS}
+      -c statement_timeout=${POSTGRES_CONFIG_STATEMENT_TIMEOUT}
+
+      -c wal_level=replica
     ports:
-      - "5433:5432"
+      - "${POSTGRES_USER_PORT:-5433}:5432"
     volumes:
       - postgres_user_data:/var/lib/postgresql/data
-      - ./configs/postgres/init-user.sql:/docker-entrypoint-initdb.d/init-user.sql:ro
+      - ./00_infrastructure/databases/postgres/init-user.sql:/docker-entrypoint-initdb.d/01-init-user.sql:ro
+      - ./00_infrastructure/databases/postgres/create-db-users.sql:/docker-entrypoint-initdb.d/02-create-users.sql:ro
     networks:
-      - app-network
+      - platform-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d user_db"]  # ← ИСПРАВИТЬ ЗДЕСЬ
-      interval: 5s
+      test: ["CMD-SHELL", "pg_isready -U postgres_admin -d user_db"]
+      interval: 10s
       timeout: 5s
       retries: 5
+      start_period: 30s
     restart: unless-stopped
-
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
   redis:
     image: redis:7-alpine
     container_name: redis
     ports:
       - "6379:6379"
-    command: redis-server --appendonly yes
+    command: redis-server --appendonly yes --requirepass secret
     volumes:
       - redis_data:/data
     networks:
-      - app-network
+      - platform-network
+    environment:
+      REDIS_PASSWORD: secret
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: ["CMD", "redis-cli", "-a", "secret", "ping"]
       interval: 5s
       timeout: 3s
       retries: 3
     restart: unless-stopped
 
+  # Message Broker
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
     container_name: zookeeper
@@ -70,7 +137,7 @@ services:
     ports:
       - "2181:2181"
     networks:
-      - app-network
+      - platform-network
     healthcheck:
       test: ["CMD", "bash", "-c", "echo stat | nc localhost 2181 || exit 1"]
       interval: 10s
@@ -82,33 +149,33 @@ services:
     image: confluentinc/cp-kafka:7.4.0
     container_name: kafka
     depends_on:
-     zookeeper:
-      condition: service_healthy
+      zookeeper:
+        condition: service_healthy
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      # КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ:
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,OUTSIDE://0.0.0.0:9094
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,OUTSIDE://localhost:9094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,OUTSIDE:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_LOG_RETENTION_HOURS: 168
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
     ports:
       - "9092:9092"
-      - "9094:9094"  # Дополнительный порт для внешних подключений, если нужно
+      - "9094:9094"
     networks:
-      - app-network
+      - platform-network
     volumes:
       - kafka_data:/var/lib/kafka/data
     healthcheck:
-      test: ["CMD-SHELL", "kafka-topics --bootstrap-server kafka:9092 --list || exit 1"]
+      test: ["CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list"]
       interval: 30s
       timeout: 10s
-      retries: 3
-      start_period: 60s  # Дайте Kafka больше времени на запуск
+      retries: 5
+      start_period: 60s
     restart: unless-stopped
 
   kafka-ui:
@@ -120,102 +187,164 @@ services:
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
       KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
+      DYNAMIC_CONFIG_ENABLED: "true"
     ports:
       - "8081:8080"
     networks:
-      - app-network
+      - platform-network
     restart: unless-stopped
 
-  # API Gateway (исправленный путь)
+  # Мониторинг
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./00_infrastructure/monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    networks:
+      - platform-network
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./00_infrastructure/monitoring/grafana/provisioning:/etc/grafana/provisioning
+      - ./00_infrastructure/monitoring/grafana/dashboards:/etc/grafana/dashboards:ro  # ДОБАВИТЬ
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+    networks:
+      - platform-network
+    restart: unless-stopped
+
+  # ================ СЕРВИСЫ ПЛАТФОРМЫ ================
+  # API Gateway
   api-gateway:
-    build: ./docker-compose/api-gateway  
+    build:
+      context: ./00_infrastructure/api-gateway
+      dockerfile: Dockerfile
     container_name: api-gateway
     ports:
-      - "8080:80"
+      - "80:80"
+      - "443:443"
     depends_on:
       auth-service:
-        condition: service_started
-      user-service:
-        condition: service_started
-      bff-gateway:
-        condition: service_started
-      frontend:
-        condition: service_started
+        condition: service_healthy
     networks:
-      - app-network
+      - platform-network
     volumes:
-      # Монтируем только логи и кэш, конфиги уже в образе
       - nginx_logs:/var/log/nginx
       - nginx_cache:/var/cache/nginx
-      # Опционально: для development можно монтировать конфиги
-      # - ./api-gateway/nginx.conf:/etc/nginx/nginx.conf:ro
-      # - ./api-gateway/conf.d:/etc/nginx/conf.d:ro
-      # - ./api-gateway/proxy_params:/etc/nginx/proxy_params:ro
+      - ./00_infrastructure/api-gateway/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./00_infrastructure/api-gateway/sites-enabled:/etc/nginx/sites-enabled:ro
+      - ./00_infrastructure/api-gateway/ssl:/etc/nginx/ssl:ro
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost/health || exit 1"]
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 10s
     restart: unless-stopped
 
-  # Сервисы
+  # Auth Service
   auth-service:
-    build: ./src/auth-service
+    build:
+      context: .
+      dockerfile: ./03_auth-service/Dockerfile
     container_name: auth-service
     ports:
       - "3001:3000"
     environment:
       NODE_ENV: development
-      DATABASE_URL: postgresql://admin:secret@postgres-auth:5432/auth_db
-      KAFKA_BROKER: "kafka:9092"
-      REDIS_URL: redis://redis:6379
-      JWT_ACCESS_SECRET: your-super-secret-access-key-change-in-production
-      JWT_REFRESH_SECRET: your-super-secret-refresh-key-different-from-access
+      DATABASE_URL: postgresql://auth_service:AuthServiceSecurePass2026!@postgres-auth:5432/auth_db?sslmode=disable
+      REDIS_URL: redis://:secret@redis:6379
+      KAFKA_BROKERS: kafka:9092
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-your-super-secret-access-key-change-in-production}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-your-super-secret-refresh-key-different-from-access}
       JWT_ACCESS_EXPIRES_IN: 15m
       JWT_REFRESH_EXPIRES_IN: 7d
       PORT: 3000
+      LOG_LEVEL: debug
+      PROMETHEUS_METRICS_PORT: 9091
     volumes:
-      - ./src/auth-service:/app
-      - /app/node_modules
+      - ./03_auth-service/src:/app/03_auth-service/src
+      - ./03_auth-service/dist:/app/03_auth-service/dist
+      - ./03_auth-service/healthcheck.js:/app/healthcheck.js:ro  # ДОБАВИТЬ
     networks:
-      - app-network
+      - platform-network
     depends_on:
       postgres-auth:
         condition: service_healthy
       redis:
         condition: service_healthy
-    command: npm run dev
+      kafka:
+        condition: service_healthy
+    command: npm start
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "node", "-e", "const http = require('http'); http.get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1); }).on('error', () => process.exit(1));"]
+      test: ["CMD", "node", "./healthcheck.js"]
       interval: 30s
-      timeout: 5s
+      timeout: 10s
       retries: 3
-      start_period: 40s #Дать время для запуска приложения
+      start_period: 90s
 
+  # User Service
   user-service:
-    build: ./src/user-service
+    build:
+      context: .
+      dockerfile: ./04_user-service/Dockerfile
     container_name: user-service
     ports:
       - "3002:3000"
     environment:
       NODE_ENV: development
-      DATABASE_URL: postgresql://admin:secret@postgres-user:5432/user_db
+      DATABASE_URL: postgresql://user_service:UserServiceSecurePass2026!@postgres-user:5432/user_db?sslmode=disable
+      REDIS_URL: redis://:secret@redis:6379
+      KAFKA_BROKERS: kafka:9092
       PORT: 3000
+      LOG_LEVEL: debug
+      AUTH_SERVICE_URL: http://auth-service:3000
+      PROMETHEUS_METRICS_PORT: 9092
     volumes:
-      - ./src/user-service:/app
-      - /app/node_modules
+      - ./04_user-service/src:/app/04_user-service/src
+      - ./04_user-service/dist:/app/04_user-service/dist
+      - ./04_user-service/healthcheck.js:/app/healthcheck.js:ro  # ДОБАВИТЬ
     networks:
-      - app-network
+      - platform-network
     depends_on:
       postgres-user:
         condition: service_healthy
-    command: npm run dev
+      redis:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    command: node dist/src/main.js
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "./healthcheck.js"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
 
+  # BFF Gateway
   bff-gateway:
-    build: ./src/bff-gateway
+    build:
+      context: .
+      dockerfile: ./02_bff-gateway/Dockerfile
     container_name: bff-gateway
     ports:
       - "3003:3000"
@@ -223,35 +352,187 @@ services:
       NODE_ENV: development
       AUTH_SERVICE_URL: http://auth-service:3000
       USER_SERVICE_URL: http://user-service:3000
+      KAFKA_BROKERS: kafka:9092
+      REDIS_URL: redis://:secret@redis:6379
+      CACHE_TTL: 300
       PORT: 3000
+      LOG_LEVEL: debug
     volumes:
-      - ./src/bff-gateway:/app
-      - /app/node_modules
+      - ./02_bff-gateway/src:/app/src
+      - ./02_bff-gateway/dist:/app/dist
+      - ./02_bff-gateway/healthcheck.js:/app/healthcheck.js:ro  # ДОБАВИТЬ
+
     networks:
-      - app-network
-    command: npm run dev
+      - platform-network
+    command: node dist/main.js
     restart: unless-stopped
 
-  # Фронтенд
+  # Event Relay Service
+  event-relay:
+    build:
+      context: .
+      dockerfile: ./06_event-relay/Dockerfile
+    container_name: event-relay
+    ports:
+      - "3006:3006"
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      KAFKA_BROKERS: ${KAFKA_BROKERS:-kafka:9092}
+      PORT: ${EVENT_RELAY_PORT:-3006}
+      LOG_LEVEL: ${LOG_LEVEL:-debug}
+      POLLING_INTERVAL_MS: ${POLLING_INTERVAL_MS:-5000}
+      AUTH_DB_HOST: ${AUTH_DB_HOST:-postgres-auth}
+      AUTH_DB_PORT: ${AUTH_DB_PORT:-5432}
+      AUTH_DB_USERNAME: ${AUTH_DB_USERNAME:-admin}
+      AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD:-secret}
+      AUTH_DB_DATABASE: ${AUTH_DB_DATABASE:-auth_db}
+      USER_DB_HOST: ${USER_DB_HOST:-postgres-user}
+      USER_DB_PORT: ${USER_DB_PORT:-5432}
+      USER_DB_USERNAME: ${USER_DB_USERNAME:-admin}
+      USER_DB_PASSWORD: ${USER_DB_PASSWORD:-secret}
+      USER_DB_DATABASE: ${USER_DB_DATABASE:-user_db}
+    volumes:
+      - ./06_event-relay/src:/app/src
+      - ./06_event-relay/dist:/app/dist
+      - ./06_event-relay/healthcheck.js:/app/healthcheck.js:ro  # ДОБАВИТЬ
+    networks:
+      - platform-network
+    depends_on:
+      postgres-auth:
+        condition: service_healthy
+      postgres-user:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    command: node dist/main.js
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "./healthcheck.js"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Frontend
   frontend:
-    build: ./src/frontend
+    build:
+      context: .
+      dockerfile: ./01_frontend/Dockerfile
     container_name: frontend
     ports:
       - "5173:5173"
-    volumes:
-      - ./src/frontend:/app
-      - /app/node_modules
+      - "4173:4173"
     environment:
-      VITE_API_URL: http://localhost:8080/api  # Прокси через nginx
-      VITE_AUTH_API_URL: http://localhost:8080/api/auth  # Явно указать auth endpoint
-      VITE_WS_URL: ws://localhost:8080
-      PORT: 5173
+      NODE_ENV: ${NODE_ENV:-development}
+      VITE_API_URL: ${VITE_API_URL:-http://localhost/api}
+      VITE_WS_URL: ${VITE_WS_URL:-ws://localhost}
+      VITE_AUTH_URL: ${VITE_AUTH_URL:-http://localhost/api/auth}
+      VITE_NODE_ENV: ${VITE_NODE_ENV:-development}
+      PORT: ${FRONTEND_PORT:-5173}
+      LOG_LEVEL: ${LOG_LEVEL:-debug}
+    volumes:
+      - ./01_frontend/src:/app/01_frontend/src
+      - ./01_frontend/public:/app/01_frontend/public
+      - ./01_frontend/dist:/app/01_frontend/dist
     networks:
-      - app-network
-    command: npm run dev
+      - platform-network
+    command: pnpm run dev -- --host 0.0.0.0 --port 5173
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "./healthcheck.cjs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Exporters для инфраструктуры
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    command:
+      - '--path.rootfs=/host'
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    ports:
+      - "9100:9100"
+    networks:
+      - platform-network
     restart: unless-stopped
 
-# Volumes (очистить лишние)
+  redis-exporter:
+    image: oliver006/redis_exporter:latest
+    container_name: redis-exporter
+    environment:
+      REDIS_ADDR: redis://redis:6379
+      REDIS_PASSWORD: secret
+    ports:
+      - "9121:9121"
+    networks:
+      - platform-network
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter:latest
+    container_name: postgres-exporter
+    environment:
+      DATA_SOURCE_NAME: "postgresql://admin:secret@postgres-auth:5432/auth_db?sslmode=disable,postgresql://admin:secret@postgres-user:5432/user_db?sslmode=disable"
+    ports:
+      - "9187:9187"
+    networks:
+      - platform-network
+    depends_on:
+      - postgres-auth
+      - postgres-user
+    healthcheck:
+     test: ["CMD", "sh", "-c", "wget -q -O- http://localhost:9187/metrics > /dev/null"]
+     interval: 30s
+     timeout: 10s
+     retries: 3
+    restart: unless-stopped
+
+  kafka-exporter:
+    image: danielqsj/kafka-exporter:latest
+    container_name: kafka-exporter
+    environment:
+      KAFKA_BROKERS: kafka:9092
+      LOG_LEVEL: info
+    ports:
+      - "9308:9308"
+    networks:
+      - platform-network
+    depends_on:
+      - kafka
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "sh", "-c", "wget -q -O- http://localhost:9308/metrics > /dev/null"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Alertmanager
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./00_infrastructure/monitoring/alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+      - alertmanager_data:/alertmanager
+    command:
+      - '--config.file=/etc/alertmanager/alertmanager.yml'
+      - '--storage.path=/alertmanager'
+    networks:
+      - platform-network
+    restart: unless-stopped
+
+# ================ VOLUMES ================
 volumes:
   postgres_auth_data:
   postgres_user_data:
@@ -259,9 +540,12 @@ volumes:
   kafka_data:
   nginx_logs:
   nginx_cache:
+  prometheus_data:
+  grafana_data:
+  alertmanager_data:
 
-# Networks (ДОБАВИТЬ)
+# ================ NETWORKS ================
 networks:
-  app-network:
+  platform-network:
     driver: bridge
-    name: platform-ecosystem_app-network  # Использовать существующее имя
+    name: platform-ecosystem-network

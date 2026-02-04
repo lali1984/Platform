@@ -1,42 +1,12 @@
 {
   "name": "platform-ecosystem",
   "version": "1.0.0",
-  "description": "",
-  "main": "test-kafka-consumer.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "private": true,
+  "packageManager": "pnpm@8.15.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "@tanstack/react-query": "^5.90.16",
-    "axios": "^1.13.2",
-    "kafkajs": "^2.2.4",
-    "lint": "^0.8.19",
-    "pg": "^8.17.1",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-router-dom": "^7.12.0",
-    "redis": "^5.10.0",
-    "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.28"
-  },
-  "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "@types/react": "^19.2.8",
-    "@types/react-dom": "^19.2.3",
-    "@types/supertest": "^6.0.3",
-    "@types/uuid": "^10.0.0",
-    "@vitejs/plugin-react": "^5.1.2",
-    "jest": "^30.2.0",
-    "supertest": "^7.2.2",
-    "ts-jest": "^29.4.6",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "build": "pnpm --filter \"./contracts\" run build && pnpm --filter \"./03_auth-service\" run build",
+    "build:contracts": "pnpm --filter \"./contracts\" run build",
+    "build:auth": "pnpm --filter \"./03_auth-service\" run build",
+    "clean": "rm -rf node_modules */node_modules"
   }
 }

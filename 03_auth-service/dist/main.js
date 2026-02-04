@@ -1,0 +1,163 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
+const helmet_1 = __importDefault(require("helmet"));
+const dotenv_1 = __importDefault(require("dotenv"));
+require("reflect-metadata");
+const database_config_1 = require("./infrastructure/config/database.config");
+const TypeORMUserRepository_1 = require("./infrastructure/persistence/repositories/TypeORMUserRepository");
+const OutboxEventPublisher_1 = require("./infrastructure/event-publishers/OutboxEventPublisher");
+const JwtTokenService_1 = require("./infrastructure/services/JwtTokenService");
+const RegisterUser_use_case_1 = require("./application/use-cases/RegisterUser.use-case");
+const LoginUser_use_case_1 = require("./application/use-cases/LoginUser.use-case");
+const user_response_dto_1 = require("./application/dto/user-response.dto");
+const AuthController_1 = require("./presentation/controllers/AuthController");
+const AuthMiddleware_1 = require("./presentation/middleware/AuthMiddleware");
+const routes_1 = require("./presentation/routes");
+dotenv_1.default.config();
+class AuthServiceApplication {
+    constructor() {
+        this.dataSource = (0, database_config_1.createDataSource)();
+        this.app = (0, express_1.default)();
+        this.setupMiddleware();
+    }
+    setupMiddleware() {
+        this.app.use((0, helmet_1.default)());
+        this.app.use((0, cors_1.default)({
+            origin: (origin, callback) => {
+                const allowedOrigins = [
+                    'http://localhost:5173',
+                    'http://localhost:3001',
+                    'http://localhost:3000',
+                    'http://localhost:8080',
+                    'null',
+                    undefined
+                ];
+                if (!origin || allowedOrigins.includes(origin)) {
+                    callback(null, true);
+                }
+                else {
+                    callback(new Error('Not allowed by CORS'));
+                }
+            },
+            credentials: true,
+            methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+            allowedHeaders: ['Content-Type', 'Authorization'],
+        }));
+        this.app.use(express_1.default.json());
+    }
+    async initializeDependencies() {
+        try {
+            // 1. Инициализируем базу данных
+            await (0, database_config_1.initializeDatabase)(this.dataSource);
+            // 2. Создаем репозиторий
+            const userRepository = new TypeORMUserRepository_1.TypeORMUserRepository(this.dataSource);
+            // 3. Создаем event publisher
+            const eventPublisher = new OutboxEventPublisher_1.OutboxEventPublisher(this.dataSource);
+            // 4. Создаем token service (использует domain порт, не contracts)
+            const tokenService = new JwtTokenService_1.JwtTokenService();
+            // 5. Создаем auth middleware
+            const authMiddleware = new AuthMiddleware_1.AuthMiddleware(tokenService);
+            // 6. Создаем UserResponseMapper (передаем userRepository)
+            const userResponseMapper = new user_response_dto_1.UserResponseMapper(userRepository);
+            // 7. Создаем use cases
+            const registerUserUseCase = new RegisterUser_use_case_1.RegisterUserUseCase(userRepository, eventPublisher);
+            const loginUserUseCase = new LoginUser_use_case_1.LoginUserUseCase(userRepository, tokenService, eventPublisher);
+            // 8. Создаем контроллер со ВСЕМИ зависимостями (5 аргументов)
+            const authController = new AuthController_1.AuthController(registerUserUseCase, loginUserUseCase, userResponseMapper, tokenService, userRepository);
+            // 9. Настраиваем маршруты
+            (0, routes_1.setupRoutes)(this.app, authController, authMiddleware);
+            console.log('✅ Dependencies initialized successfully');
+            console.log('📦 Using Outbox pattern for event publishing');
+            console.log('🔒 Minimal external dependencies');
+            console.log('📚 Contracts: @platform/contracts');
+        }
+        catch (error) {
+            console.error('❌ Failed to initialize dependencies:', error);
+            throw error;
+        }
+    }
+    setupErrorHandling() {
+        // 404 handler
+        this.app.use((req, res) => {
+            res.status(404).json({
+                success: false,
+                error: 'Route not found',
+                path: req.path,
+            });
+        });
+        // Global error handler
+        this.app.use((err, _req, res, _next) => {
+            console.error('Unhandled error:', err);
+            res.status(500).json({
+                success: false,
+                error: 'Internal server error',
+            });
+        });
+    }
+    async start() {
+        const PORT = process.env.PORT || 3001;
+        try {
+            // Инициализируем зависимости
+            await this.initializeDependencies();
+            // Настраиваем обработку ошибок
+            this.setupErrorHandling();
+            // Запускаем сервер
+            this.app.listen(PORT, () => {
+                console.log('🚀 Auth Service (Clean Architecture) started successfully!');
+                console.log(`   Port: ${PORT}`);
+                console.log(`   Environment: ${process.env.NODE_ENV || 'development'}`);
+                console.log('   Available endpoints:');
+                console.log(`   • http://localhost:${PORT}/health`);
+                console.log(`   • http://localhost:${PORT}/api/auth/register (POST)`);
+                console.log(`   • http://localhost:${PORT}/api/auth/login (POST)`);
+                console.log(`   • http://localhost:${PORT}/api/auth/validate-token (POST)`);
+                console.log(`   • http://localhost:${PORT}/api/auth/refresh-token (POST)`);
+                console.log(`   • http://localhost:${PORT}/api/auth/logout (POST)`);
+                console.log('\n📚 Architecture:');
+                console.log('   • Clean Architecture with 4 layers');
+                console.log('   • Domain-Driven Design');
+                console.log('   • Ports & Adapters pattern');
+                console.log('   • Outbox pattern for events');
+                console.log('   • Contracts: @platform/contracts');
+            });
+            // Graceful shutdown
+            this.setupGracefulShutdown();
+        }
+        catch (error) {
+            console.error('❌ Failed to start auth service:', error);
+            process.exit(1);
+        }
+    }
+    setupGracefulShutdown() {
+        const shutdown = async () => {
+            console.log('\n🔻 Shutting down auth service...');
+            try {
+                // Закрываем соединение с базой данных
+                if (this.dataSource.isInitialized) {
+                    await this.dataSource.destroy();
+                    console.log('✅ Database connection closed');
+                }
+                console.log('👋 Auth service shutdown complete');
+                process.exit(0);
+            }
+            catch (error) {
+                console.error('❌ Error during shutdown:', error);
+                process.exit(1);
+            }
+        };
+        process.on('SIGTERM', shutdown);
+        process.on('SIGINT', shutdown);
+    }
+}
+// Запуск приложения
+const app = new AuthServiceApplication();
+app.start().catch((error) => {
+    console.error('Fatal error:', error);
+    process.exit(1);
+});
+//# sourceMappingURL=main.js.map

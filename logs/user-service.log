@@ -1,0 +1,3018 @@
+
+> start:dev
+> nest start --watch
+
+[2J[3J[H[[90m2:59:37 AM[0m] Starting compilation in watch mode...
+
+[[90m2:59:38 AM[0m] Found 0 errors. Watching for file changes.
+
+(node:53327) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[32m[Nest] 53333  - [39m01/23/2026, 2:59:39 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-22T23:59:39.536Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 53333  - [39m01/23/2026, 2:59:39 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 53333  - [39m01/23/2026, 2:59:39 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 53333  - [39m01/23/2026, 2:59:39 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 53333  - [39m01/23/2026, 2:59:39 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 53333  - [39m01/23/2026, 2:59:39 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 2:59:42 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 2:59:45 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 2:59:48 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 2:59:51 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 2:59:54 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 2:59:57 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 3:00:00 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 3:00:03 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 53333  - [39m01/23/2026, 3:00:03 AM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m1:53:31 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m1:53:31 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 76004  - [39m01/23/2026, 1:53:32 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-23T10:53:32.855Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 76004  - [39m01/23/2026, 1:53:32 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 76004  - [39m01/23/2026, 1:53:32 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76004  - [39m01/23/2026, 1:53:32 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76004  - [39m01/23/2026, 1:53:32 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 76004  - [39m01/23/2026, 1:53:32 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m1:53:34 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m1:53:34 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 76026  - [39m01/23/2026, 1:53:35 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-23T10:53:35.108Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 76026  - [39m01/23/2026, 1:53:35 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 76026  - [39m01/23/2026, 1:53:35 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 76026  - [39m01/23/2026, 1:53:35 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 76026  - [39m01/23/2026, 1:53:35 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:35 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:38 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:41 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:44 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:47 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:50 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:53 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:56 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:59 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 76026  - [39m01/23/2026, 1:53:59 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m3:30:17 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m3:30:17 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 93063  - [39m01/23/2026, 3:30:19 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-23T12:30:19.076Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 93063  - [39m01/23/2026, 3:30:19 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 93063  - [39m01/23/2026, 3:30:19 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93063  - [39m01/23/2026, 3:30:19 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93063  - [39m01/23/2026, 3:30:19 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 93063  - [39m01/23/2026, 3:30:19 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m3:30:20 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m3:30:21 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 93086  - [39m01/23/2026, 3:30:21 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-23T12:30:21.694Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 93086  - [39m01/23/2026, 3:30:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 93086  - [39m01/23/2026, 3:30:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 93086  - [39m01/23/2026, 3:30:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93086  - [39m01/23/2026, 3:30:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:21 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:24 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:27 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:30 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:33 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:36 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:39 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:42 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:45 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93086  - [39m01/23/2026, 3:30:45 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m3:32:35 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m3:32:36 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 93410  - [39m01/23/2026, 3:32:37 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-23T12:32:37.256Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 93410  - [39m01/23/2026, 3:32:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 93410  - [39m01/23/2026, 3:32:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93410  - [39m01/23/2026, 3:32:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93410  - [39m01/23/2026, 3:32:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 93410  - [39m01/23/2026, 3:32:37 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93410  - [39m01/23/2026, 3:32:40 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m3:32:41 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m3:32:41 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 93447  - [39m01/23/2026, 3:32:42 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-23T12:32:42.710Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 93447  - [39m01/23/2026, 3:32:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 93447  - [39m01/23/2026, 3:32:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 93447  - [39m01/23/2026, 3:32:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 93447  - [39m01/23/2026, 3:32:42 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 93447  - [39m01/23/2026, 3:32:42 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m3:32:43 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m10[0m:[93m29[0m - [91merror[0m[90m TS2304: [0mCannot find name 'TypeOrmModuleOptions'.
+
+[7m10[0m export const typeormConfig: TypeOrmModuleOptions = {
+[7m  [0m [91m                            ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m13[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserEntity'.
+
+[7m13[0m     UserEntity,
+[7m  [0m [91m    ~~~~~~~~~~[0m
+
+[[90m3:32:44 PM[0m] Found 2 errors. Watching for file changes.
+
+[31m[Nest] 93447  - [39m01/23/2026, 3:32:45 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93447  - [39m01/23/2026, 3:32:48 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93447  - [39m01/23/2026, 3:32:51 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93447  - [39m01/23/2026, 3:32:54 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93447  - [39m01/23/2026, 3:32:57 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93447  - [39m01/23/2026, 3:33:00 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93447  - [39m01/23/2026, 3:33:03 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93447  - [39m01/23/2026, 3:33:06 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 93447  - [39m01/23/2026, 3:33:06 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m3:35:58 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m10[0m:[93m29[0m - [91merror[0m[90m TS2304: [0mCannot find name 'TypeOrmModuleOptions'.
+
+[7m10[0m export const typeormConfig: TypeOrmModuleOptions = {
+[7m  [0m [91m                            ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m13[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserEntity'.
+
+[7m13[0m     UserEntity,
+[7m  [0m [91m    ~~~~~~~~~~[0m
+
+[[90m3:35:58 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:37:29 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'cli' does not exist in type '{ retryAttempts?: number; retryDelay?: number; toRetry?: (err: any) => boolean; autoLoadEntities?: boolean; keepConnectionAlive?: boolean; verboseRetryLog?: boolean; manualInitialization?: boolean; } & Partial<...>'.
+
+[7m25[0m   cli: {
+[7m  [0m [91m  ~~~[0m
+
+[[90m3:37:29 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m3:40:35 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'cli' does not exist in type '{ retryAttempts?: number; retryDelay?: number; toRetry?: (err: any) => boolean; autoLoadEntities?: boolean; keepConnectionAlive?: boolean; verboseRetryLog?: boolean; manualInitialization?: boolean; } & Partial<...>'.
+
+[7m25[0m   cli: {
+[7m  [0m [91m  ~~~[0m
+
+[[90m3:40:35 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m3:44:04 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'cli' does not exist in type '{ retryAttempts?: number; retryDelay?: number; toRetry?: (err: any) => boolean; autoLoadEntities?: boolean; keepConnectionAlive?: boolean; verboseRetryLog?: boolean; manualInitialization?: boolean; } & Partial<...>'.
+
+[7m25[0m   cli: {
+[7m  [0m [91m  ~~~[0m
+
+[[90m3:44:04 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m3:45:43 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'cli' does not exist in type '{ retryAttempts?: number; retryDelay?: number; toRetry?: (err: any) => boolean; autoLoadEntities?: boolean; keepConnectionAlive?: boolean; verboseRetryLog?: boolean; manualInitialization?: boolean; } & Partial<...>'.
+
+[7m25[0m   cli: {
+[7m  [0m [91m  ~~~[0m
+
+[[90m3:45:44 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m3:46:39 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/infrastructure/config/typeorm.config.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'cli' does not exist in type '{ retryAttempts?: number; retryDelay?: number; toRetry?: (err: any) => boolean; autoLoadEntities?: boolean; keepConnectionAlive?: boolean; verboseRetryLog?: boolean; manualInitialization?: boolean; } & Partial<...>'.
+
+[7m25[0m   cli: {
+[7m  [0m [91m  ~~~[0m
+
+[[90m3:46:40 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m3:55:08 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m3:55:08 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 96737  - [39m01/23/2026, 3:55:09 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 96737  - [39m01/23/2026, 3:55:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +7ms[39m
+[32m[Nest] 96737  - [39m01/23/2026, 3:55:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 96737  - [39m01/23/2026, 3:55:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 96737  - [39m01/23/2026, 3:55:09 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:09 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:12 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:15 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:18 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:21 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:24 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:27 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:30 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:33 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 96737  - [39m01/23/2026, 3:55:33 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m5:22:50 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m5:22:50 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 7358  - [39m01/23/2026, 5:22:52 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 7358  - [39m01/23/2026, 5:22:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 7358  - [39m01/23/2026, 5:22:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7358  - [39m01/23/2026, 5:22:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7358  - [39m01/23/2026, 5:22:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 7358  - [39m01/23/2026, 5:22:52 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:22:55 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:22:58 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:23:01 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:23:04 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:23:07 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:23:10 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:23:13 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:23:16 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7358  - [39m01/23/2026, 5:23:16 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m5:25:27 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m5:25:27 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 7708  - [39m01/23/2026, 5:25:28 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 7708  - [39m01/23/2026, 5:25:28 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 7708  - [39m01/23/2026, 5:25:28 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7708  - [39m01/23/2026, 5:25:28 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7708  - [39m01/23/2026, 5:25:28 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 7708  - [39m01/23/2026, 5:25:28 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7708  - [39m01/23/2026, 5:25:31 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m5:25:32 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m5:25:32 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 7744  - [39m01/23/2026, 5:25:32 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 7744  - [39m01/23/2026, 5:25:32 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 7744  - [39m01/23/2026, 5:25:32 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7744  - [39m01/23/2026, 5:25:32 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7744  - [39m01/23/2026, 5:25:32 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:32 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:35 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:38 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:41 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:44 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:47 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:50 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:53 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:56 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 7744  - [39m01/23/2026, 5:25:56 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m12:17:43 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m12:17:43 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 67882  - [39m01/24/2026, 12:17:45 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 67882  - [39m01/24/2026, 12:17:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 67882  - [39m01/24/2026, 12:17:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 67882  - [39m01/24/2026, 12:17:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 67882  - [39m01/24/2026, 12:17:45 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 67882  - [39m01/24/2026, 12:17:45 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67882  - [39m01/24/2026, 12:17:48 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67882  - [39m01/24/2026, 12:17:51 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67882  - [39m01/24/2026, 12:17:54 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m12:17:55 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m12:17:55 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 67921  - [39m01/24/2026, 12:17:55 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 67921  - [39m01/24/2026, 12:17:55 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 67921  - [39m01/24/2026, 12:17:56 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 67921  - [39m01/24/2026, 12:17:56 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 67921  - [39m01/24/2026, 12:17:56 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 67921  - [39m01/24/2026, 12:17:56 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:17:59 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:18:02 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:18:05 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:18:08 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:18:11 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:18:14 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:18:17 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:18:20 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 67921  - [39m01/24/2026, 12:18:20 AM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m12:18:48 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m12:18:48 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 68051  - [39m01/24/2026, 12:18:49 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 68051  - [39m01/24/2026, 12:18:49 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 68051  - [39m01/24/2026, 12:18:49 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 68051  - [39m01/24/2026, 12:18:49 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68051  - [39m01/24/2026, 12:18:49 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 68051  - [39m01/24/2026, 12:18:49 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68051  - [39m01/24/2026, 12:18:52 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68051  - [39m01/24/2026, 12:18:55 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68051  - [39m01/24/2026, 12:18:58 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68051  - [39m01/24/2026, 12:19:01 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m12:19:02 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m12:19:02 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 68101  - [39m01/24/2026, 12:19:03 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 68101  - [39m01/24/2026, 12:19:03 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 68101  - [39m01/24/2026, 12:19:03 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68101  - [39m01/24/2026, 12:19:03 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68101  - [39m01/24/2026, 12:19:03 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:03 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:06 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:09 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:12 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:15 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:18 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:21 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:24 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:27 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68101  - [39m01/24/2026, 12:19:27 AM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m12:19:58 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m12:19:58 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 68230  - [39m01/24/2026, 12:19:59 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 68230  - [39m01/24/2026, 12:19:59 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 68230  - [39m01/24/2026, 12:19:59 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68230  - [39m01/24/2026, 12:19:59 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68230  - [39m01/24/2026, 12:19:59 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 68230  - [39m01/24/2026, 12:19:59 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:02 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:05 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m12:20:06 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[[90m12:20:06 AM[0m] Found 1 error. Watching for file changes.
+
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:09 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:12 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:15 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:18 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:21 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:24 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 68230  - [39m01/24/2026, 12:20:24 AM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m12:21:30 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[[90m12:21:30 AM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m12:21:36 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m3[0m:[93m31[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../domain/ports/event-consumer.port' or its corresponding type declarations.
+
+[7m3[0m import { EventConsumer } from '../../../domain/ports/event-consumer.port';
+[7m [0m [91m                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[[90m12:21:36 AM[0m] Found 5 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:22:01 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m3[0m:[93m31[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../domain/ports/event-consumer.port' or its corresponding type declarations.
+
+[7m3[0m import { EventConsumer } from '../../domain/ports/event-consumer.port';
+[7m [0m [91m                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[[90m12:22:01 AM[0m] Found 5 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:22:57 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[[90m12:22:57 AM[0m] Found 6 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:23:36 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[[90m12:23:36 AM[0m] Found 6 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:23:42 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/messaging.module.ts[0m:[93m2[0m:[93m38[0m - [91merror[0m[90m TS2307: [0mCannot find module './kafka-producer.service' or its corresponding type declarations.
+
+[7m2[0m import { KafkaProducerService } from './kafka-producer.service';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:23:42 AM[0m] Found 7 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:24:08 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/messaging.module.ts[0m:[93m2[0m:[93m38[0m - [91merror[0m[90m TS2307: [0mCannot find module './kafka-producer.service' or its corresponding type declarations.
+
+[7m2[0m import { KafkaProducerService } from './kafka-producer.service';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:24:08 AM[0m] Found 7 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:24:15 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/event-consumer.service.ts[0m:[93m3[0m:[93m50[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../application/use-cases/handle-user-registered-event.use-case' or its corresponding type declarations.
+
+[7m3[0m import { HandleUserRegisteredEventUseCase } from '../../../application/use-cases/handle-user-registered-event.use-case';
+[7m [0m [91m                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/event-consumer.service.ts[0m:[93m4[0m:[93m40[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../application/dto/user-registered-event.dto' or its corresponding type declarations.
+
+[7m4[0m import { UserRegisteredEventDto } from '../../../application/dto/user-registered-event.dto';
+[7m [0m [91m                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/messaging.module.ts[0m:[93m2[0m:[93m38[0m - [91merror[0m[90m TS2307: [0mCannot find module './kafka-producer.service' or its corresponding type declarations.
+
+[7m2[0m import { KafkaProducerService } from './kafka-producer.service';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:24:15 AM[0m] Found 9 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:25:29 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/event-consumer.service.ts[0m:[93m3[0m:[93m50[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../application/use-cases/handle-user-registered-event.use-case' or its corresponding type declarations.
+
+[7m3[0m import { HandleUserRegisteredEventUseCase } from '../../../application/use-cases/handle-user-registered-event.use-case';
+[7m [0m [91m                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/event-consumer.service.ts[0m:[93m4[0m:[93m40[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../application/dto/user-registered-event.dto' or its corresponding type declarations.
+
+[7m4[0m import { UserRegisteredEventDto } from '../../../application/dto/user-registered-event.dto';
+[7m [0m [91m                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/messaging.module.ts[0m:[93m2[0m:[93m38[0m - [91merror[0m[90m TS2307: [0mCannot find module './kafka-producer.service' or its corresponding type declarations.
+
+[7m2[0m import { KafkaProducerService } from './kafka-producer.service';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:25:29 AM[0m] Found 9 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:27:16 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/event-consumer.service.ts[0m:[93m3[0m:[93m50[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../application/use-cases/handle-user-registered-event.use-case' or its corresponding type declarations.
+
+[7m3[0m import { HandleUserRegisteredEventUseCase } from '../../../application/use-cases/handle-user-registered-event.use-case';
+[7m [0m [91m                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/event-consumer.service.ts[0m:[93m4[0m:[93m40[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../application/dto/user-registered-event.dto' or its corresponding type declarations.
+
+[7m4[0m import { UserRegisteredEventDto } from '../../../application/dto/user-registered-event.dto';
+[7m [0m [91m                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/messaging.module.ts[0m:[93m2[0m:[93m38[0m - [91merror[0m[90m TS2307: [0mCannot find module './kafka-producer.service' or its corresponding type declarations.
+
+[7m2[0m import { KafkaProducerService } from './kafka-producer.service';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:27:16 AM[0m] Found 9 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:28:01 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/event-consumer.service.ts[0m:[93m3[0m:[93m50[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../application/use-cases/handle-user-registered-event.use-case' or its corresponding type declarations.
+
+[7m3[0m import { HandleUserRegisteredEventUseCase } from '../../../application/use-cases/handle-user-registered-event.use-case';
+[7m [0m [91m                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/event-consumer.service.ts[0m:[93m4[0m:[93m40[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../application/dto/user-registered-event.dto' or its corresponding type declarations.
+
+[7m4[0m import { UserRegisteredEventDto } from '../../../application/dto/user-registered-event.dto';
+[7m [0m [91m                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/messaging.module.ts[0m:[93m2[0m:[93m38[0m - [91merror[0m[90m TS2307: [0mCannot find module './kafka-producer.service' or its corresponding type declarations.
+
+[7m2[0m import { KafkaProducerService } from './kafka-producer.service';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:28:01 AM[0m] Found 9 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:28:52 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/messaging.module.ts[0m:[93m2[0m:[93m38[0m - [91merror[0m[90m TS2307: [0mCannot find module './kafka-producer.service' or its corresponding type declarations.
+
+[7m2[0m import { KafkaProducerService } from './kafka-producer.service';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:28:52 AM[0m] Found 7 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:30:12 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m9[0m:[93m11[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m9[0m   private isConnected = false;
+[7m [0m [91m          ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'isConnected'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2416: [0mProperty 'isConnected' in type 'KafkaConsumerService' is not assignable to the same property in base type 'EventConsumer'.
+  Type 'boolean' is not assignable to type '() => boolean'.
+
+[7m112[0m   isConnected(): boolean {
+[7m   [0m [91m  ~~~~~~~~~~~[0m
+
+[[90m12:30:12 AM[0m] Found 6 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:35:33 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[96msrc/infrastructure/external/kafka-consumer.service.ts[0m:[93m16[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'groupId' does not exist in type 'KafkaConfig'.
+
+[7m16[0m       groupId: 'user-service-group', // Consumer group для горизонтального масштабирования
+[7m  [0m [91m      ~~~~~~~[0m
+
+[[90m12:35:34 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:38:54 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[[90m12:38:55 AM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m12:43:09 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[[90m12:43:09 AM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m12:49:31 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'id' does not exist in type 'CreateUserDto'.
+
+[7m18[0m       id: event.data.userId, // Это свяжет auth_db.users.id с user_db.user_profiles.user_id
+[7m  [0m [91m      ~~[0m
+
+[[90m12:49:31 AM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m12:50:19 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m12:50:19 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 72639  - [39m01/24/2026, 12:50:20 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-23T21:50:20.918Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 72639  - [39m01/24/2026, 12:50:20 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 72639  - [39m01/24/2026, 12:50:20 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMessagingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72639  - [39m01/24/2026, 12:50:20 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72639  - [39m01/24/2026, 12:50:20 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 72639  - [39m01/24/2026, 12:50:20 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:20 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:23 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:26 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:29 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:32 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:36 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:39 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:42 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:45 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 72639  - [39m01/24/2026, 12:50:45 AM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m12:53:29 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m12:53:30 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 73117  - [39m01/24/2026, 12:53:31 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-23T21:53:31.115Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 73117  - [39m01/24/2026, 12:53:31 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +9ms[39m
+[32m[Nest] 73117  - [39m01/24/2026, 12:53:31 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMessagingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73117  - [39m01/24/2026, 12:53:31 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73117  - [39m01/24/2026, 12:53:31 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73117  - [39m01/24/2026, 12:53:31 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:31 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:34 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:37 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:40 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:43 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:46 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:49 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:52 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:55 AM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 73117  - [39m01/24/2026, 12:53:55 AM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m2:57:54 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:57:55 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 22896  - [39m01/26/2026, 2:57:57 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+{"level":"WARN","timestamp":"2026-01-26T11:57:57.014Z","logger":"kafkajs","message":"KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option \"createPartitioner: Partitioners.LegacyPartitioner\". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable \"KAFKAJS_NO_PARTITIONER_WARNING=1\""}
+[32m[Nest] 22896  - [39m01/26/2026, 2:57:57 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 22896  - [39m01/26/2026, 2:57:57 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMessagingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 22896  - [39m01/26/2026, 2:57:57 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 22896  - [39m01/26/2026, 2:57:57 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 22896  - [39m01/26/2026, 2:57:57 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[31m[Nest] 22896  - [39m01/26/2026, 2:57:57 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (1)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:00 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (2)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:03 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (3)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m2:58:05 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/dto/user-registered-event.dto.ts[0m:[93m1[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+[7m1[0m import { UserRegisteredEvent } from '../../../contracts/events/src/auth/user-registered.event';
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m18[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'firstName' does not exist on type '{ userId: string; email: string; name: string; registeredAt: string; }'.
+
+[7m18[0m       firstName: event.data.firstName || '',
+[7m  [0m [91m                            ~~~~~~~~~[0m
+
+[96msrc/application/use-cases/handle-user-registered-event.use-case.ts[0m:[93m19[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'lastName' does not exist on type '{ userId: string; email: string; name: string; registeredAt: string; }'.
+
+[7m19[0m       lastName: event.data.lastName || '',
+[7m  [0m [91m                           ~~~~~~~~[0m
+
+[[90m2:58:05 PM[0m] Found 3 errors. Watching for file changes.
+
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:06 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (4)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:09 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (5)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:12 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (6)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:15 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (7)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m2:58:18 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/dto/user-registered-event.dto.ts[0m:[93m1[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+[7m1[0m import { UserRegisteredEvent } from '../../../contracts/events/src/auth/user-registered.event';
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:58:18 PM[0m] Found 1 error. Watching for file changes.
+
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:18 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (8)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:21 PM [31m  ERROR[39m [38;5;3m[TypeOrmModule] [39m[31mUnable to connect to the database. Retrying (9)...[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[31m[Nest] 22896  - [39m01/26/2026, 2:58:21 PM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mgetaddrinfo ENOTFOUND postgres-user[39m
+Error: getaddrinfo ENOTFOUND postgres-user
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)
+[2J[3J[H[[90m2:58:36 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/dto/user-registered-event.dto.ts[0m:[93m1[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+[7m1[0m import { UserRegisteredEvent } from '../../../contracts/events/src/auth/user-registered.event';
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:58:36 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m2:59:06 PM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/application/dto/user-registered-event.dto.ts[0m:[93m1[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../../contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+[7m1[0m import { UserRegisteredEvent } from '../../../contracts/events/src/auth/user-registered.event';
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:59:06 PM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m3:04:48 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m19[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m19[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:04:51 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:20:14 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m19[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m19[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:20:15 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:20:31 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m19[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m19[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:20:31 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:20:53 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m19[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m19[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:20:53 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:21:07 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m19[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m19[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:21:07 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:25:28 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m19[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m19[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:25:28 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:28:06 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:28:06 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:28:10 PM[0m] File change detected. Starting incremental compilation...
+
+[2J[3J[H[[90m3:30:13 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:30:13 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:30:27 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:30:27 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:32:23 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:32:24 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:00:33 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:00:33 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:03:29 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:03:29 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:04:21 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:04:21 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:09:41 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:09:42 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:10:42 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:10:42 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:11:24 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:11:24 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m10:17:59 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m10:18:00 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:46:11 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:46:12 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:52:41 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:52:41 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:56:17 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:56:17 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:56:41 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:56:42 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:59:03 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:59:03 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:00:31 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m3[0m:[93m15[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m3[0m     "module": "commonjs",
+[7m [0m [91m              ~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:00:32 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:01:55 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m3[0m:[93m15[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m3[0m     "module": "commonjs",
+[7m [0m [91m              ~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:01:55 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:02:08 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m3[0m:[93m15[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m3[0m     "module": "commonjs",
+[7m [0m [91m              ~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:02:08 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:03:54 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m3[0m:[93m15[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m3[0m     "module": "commonjs",
+[7m [0m [91m              ~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m15[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m15[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m18[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m18[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:03:54 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:04:59 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m2[0m:[93m13[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m2[0m   "module": "Node16",
+[7m [0m [91m            ~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m21[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m21[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m24[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m24[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:04:59 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:04:59 AM[0m] File change detected. Starting incremental compilation...
+
+[2J[3J[H[[90m2:07:31 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m8[0m:[93m15[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m8[0m     "module": "Node16",  // ← ДОБАВЬТЕ ЭТУ СТРОКУ
+[7m [0m [91m              ~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m16[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m16[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m19[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m19[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:07:31 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:08:09 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m8[0m:[93m15[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m8[0m     "module": "Node16",  // ← ДОБАВЬТЕ ЭТУ СТРОКУ
+[7m [0m [91m              ~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m16[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m16[0m     "strictNullChecks": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m19[0m:[93m5[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m19[0m     "strictPropertyInitialization": true,
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:08:09 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:13:53 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m3[0m:[93m13[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m3[0m   "module": "Node16",
+[7m [0m [91m            ~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:13:54 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:14:35 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m3[0m:[93m13[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m3[0m   "module": "Node16",
+[7m [0m [91m            ~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:14:35 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:15:19 AM[0m] File change detected. Starting incremental compilation...
+
+[2J[3J[H[[90m2:17:26 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m5[0m:[93m13[0m - [91merror[0m[90m TS5110: [0mOption 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+
+[7m5[0m   "module": "commonjs",
+[7m [0m [91m            ~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m24[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m24[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m27[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m27[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:17:26 AM[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:18:50 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:18:51 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:22:24 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:22:24 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:23:13 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:23:13 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:25:54 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:25:54 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:28:05 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:28:05 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:30:40 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:30:40 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:31:09 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:31:09 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:33:50 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:33:50 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:34:54 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:34:54 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:36:43 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:36:43 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:38:57 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:38:57 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:41:00 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:41:00 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:42:18 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:42:18 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:45:32 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:45:32 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:49:57 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:49:57 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:51:16 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:51:16 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:52:52 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:52:52 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:53:44 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:53:44 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:54:14 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:54:14 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:54:58 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:54:58 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:55:20 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:55:20 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:56:20 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:56:20 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:59:17 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m2:59:17 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:13:23 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:13:23 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:14:46 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:14:46 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:15:58 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:15:59 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:17:06 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:17:06 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:19:08 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:19:08 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:23:18 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:23:18 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:25:02 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:25:02 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:25:10 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:25:10 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:28:23 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:28:24 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:30:12 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:30:12 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:30:31 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:30:31 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:33:25 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:33:25 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:34:51 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:34:51 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:35:42 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:35:42 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:35:49 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:35:49 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:36:23 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:36:23 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:37:03 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:37:03 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:38:03 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:38:03 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:41:43 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:41:43 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:41:56 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:41:56 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:45:39 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:45:39 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:52:11 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:52:11 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:52:21 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:52:21 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:55:41 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:55:41 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:57:17 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:57:17 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:57:38 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:57:38 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:58:18 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:58:18 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:05:20 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:05:20 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:07:36 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:07:36 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:09:10 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:09:10 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:10:08 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:10:08 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:10:12 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:10:12 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:11:25 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:11:25 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m4:12:24 AM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m4:12:24 AM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:41:14 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:41:14 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:42:16 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:42:16 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:44:11 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:44:11 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:48:10 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:48:10 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:49:41 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:49:41 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:50:31 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:50:31 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:51:18 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:51:18 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:52:59 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:52:59 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:54:52 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:54:52 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:58:33 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:58:33 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m12:58:47 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m12:58:47 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:00:58 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:00:58 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:01:38 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:01:39 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:02:16 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:02:16 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:05:12 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:05:12 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:05:59 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:05:59 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:08:32 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:08:32 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:09:43 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:09:43 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:31:12 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:31:12 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:31:18 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:31:18 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:32:51 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:32:51 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m1:33:23 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m1:33:23 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:19:18 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:19:19 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:21:29 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:21:29 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:23:07 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:23:07 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:24:17 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:24:17 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:26:31 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:26:31 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m3:27:30 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m3:27:30 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:39:23 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m5:39:23 PM[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m5:59:09 PM[0m] File change detected. Starting incremental compilation...
+
+[96mtsconfig.json[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m23[0m   "strictNullChecks": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~[0m
+
+[96mtsconfig.json[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS5052: [0mOption 'strictPropertyInitialization' cannot be specified without specifying option 'strictNullChecks'.
+
+[7m26[0m   "strictPropertyInitialization": true,
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m5:59:09 PM[0m] Found 2 errors. Watching for file changes.
+

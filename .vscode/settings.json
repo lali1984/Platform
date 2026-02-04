@@ -1,3 +1,5 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "scm.compactFolders": true,
+    "explorer.sortOrder": "default",
 }

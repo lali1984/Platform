@@ -1,0 +1,135 @@
+# ============================================
+# PRODUCTION DOCKERFILE FOR USER-SERVICE
+# Multi-stage build for optimal image size
+# ============================================
+
+# Stage 1: Builder - для сборки приложения
+FROM node:20-alpine AS builder
+
+# Устанавливаем pnpm и необходимые системные зависимости
+RUN npm install -g pnpm@8.15.0 && \
+    apk add --no-cache \
+    git \
+    python3 \
+    make \
+    g++ \
+    postgresql-client
+
+WORKDIR /app
+
+# Копируем корневые конфигурационные файлы
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+
+# Копируем contracts
+COPY contracts/package.json ./contracts/
+COPY contracts/tsconfig.json ./contracts/
+COPY contracts/src ./contracts/src
+
+# Копируем user-service
+COPY 04_user-service/package.json ./04_user-service/
+COPY 04_user-service/tsconfig.json ./04_user-service/
+COPY 04_user-service/tsconfig.build.json ./04_user-service/
+COPY 04_user-service/nest-cli.json ./04_user-service/
+COPY 04_user-service/src ./04_user-service/src
+
+# Устанавливаем зависимости
+RUN pnpm install --frozen-lockfile --prod false
+
+# Собираем contracts
+RUN cd contracts && pnpm run build
+
+# Собираем user-service
+RUN cd 04_user-service && pnpm run build
+
+# Проверяем сборку
+RUN ls -la 04_user-service/dist/ && \
+    test -f 04_user-service/dist/src/main.js && \
+    echo "✅ Build successful"
+
+# Stage 2: Production - минимальный образ для запуска
+FROM node:20-alpine AS production
+
+# Устанавливаем только production зависимости
+RUN npm install -g pnpm@8.15.0 && \
+    apk add --no-cache \
+    curl \
+    postgresql-client \
+    tini
+
+# Используем tini как init process для корректной обработки сигналов
+ENTRYPOINT ["/sbin/tini", "--"]
+
+WORKDIR /app
+
+# Создаем пользователя без привилегий для безопасности
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 && \
+    chown -R nodejs:nodejs /app
+
+USER nodejs
+
+# Копируем только необходимые файлы из builder stage
+COPY --from=builder --chown=nodejs:nodejs /app/04_user-service/dist ./dist
+COPY --from=builder --chown=nodejs:nodejs /app/04_user-service/package.json ./
+COPY --from=builder --chown=nodejs:nodejs /app/04_user-service/node_modules ./node_modules
+COPY --from=builder --chown=nodejs:nodejs /app/contracts/dist ./node_modules/@platform/contracts/dist
+COPY --from=builder --chown=nodejs:nodejs /app/contracts/package.json ./node_modules/@platform/contracts/package.json
+
+# Создаем директории для логов
+RUN mkdir -p logs && chown nodejs:nodejs logs
+
+# Копируем healthcheck скрипт
+COPY --chown=nodejs:nodejs healthcheck.js ./
+
+# Настройки production
+ENV NODE_ENV=production
+ENV PORT=3000
+ENV LOG_LEVEL=info
+
+# Открываем порт
+EXPOSE 3000
+
+# Healthcheck для Docker/Kubernetes
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+  CMD node healthcheck.js
+
+# Команда запуска
+CMD ["node", "dist/src/main.js"]
+
+# ============================================
+# HEALTHCHECK SCRIPT
+# ============================================
+# healthcheck.js
+const http = require('http');
+
+const options = {
+  hostname: 'localhost',
+  port: process.env.PORT || 3000,
+  path: '/health/live',
+  timeout: 5000,
+  headers: {
+    'User-Agent': 'Docker-Health-Check/1.0'
+  }
+};
+
+const req = http.request(options, (res) => {
+  if (res.statusCode === 200) {
+    process.exit(0);
+  } else {
+    console.error(`Health check failed with status: ${res.statusCode}`);
+    process.exit(1);
+  }
+});
+
+req.on('error', (err) => {
+  console.error(`Health check error: ${err.message}`);
+  process.exit(1);
+});
+
+req.on('timeout', () => {
+  console.error('Health check timeout');
+  req.destroy();
+  process.exit(1);
+});
+
+req.end();

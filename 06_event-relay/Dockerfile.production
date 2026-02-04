@@ -1,0 +1,95 @@
+# Stage 1: Builder - установка и сборка зависимостей
+FROM node:20-alpine AS builder
+
+# Устанавливаем pnpm и другие утилиты
+RUN npm install -g pnpm@8.15.0 && \
+    apk add --no-cache curl jq
+
+WORKDIR /app
+
+# Копируем минимально необходимые файлы для установки зависимостей
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY contracts/package.json ./contracts/
+COPY 06_event-relay/package.json ./06_event-relay/
+
+# Устанавливаем зависимости только для production (с фильтрацией dev deps)
+RUN pnpm install --frozen-lockfile --prod --filter="./contracts" --filter="./06_event-relay"
+
+# Копируем исходный код contracts и собираем
+COPY contracts/src ./contracts/src
+COPY contracts/tsconfig.json ./contracts/
+RUN cd contracts && pnpm run build
+
+# Копируем исходный код event-relay
+COPY 06_event-relay/src ./06_event-relay/src
+COPY 06_event-relay/tsconfig.json ./06_event-relay/
+
+# Проверяем наличие критических зависимостей
+RUN cd 06_event-relay && \
+    echo "Checking critical dependencies..." && \
+    ls -la node_modules/express && \
+    ls -la node_modules/kafkajs && \
+    ls -la node_modules/pg && \
+    ls -la node_modules/prom-client
+
+# Собираем event-relay
+RUN cd 06_event-relay && pnpm run build
+
+# Проверяем сборку
+RUN ls -la 06_event-relay/dist/main.js && \
+    file 06_event-relay/dist/main.js
+
+# Stage 2: Production runtime
+FROM node:20-alpine AS runtime
+
+# Создаем непривилегированного пользователя
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 && \
+    mkdir -p /app && \
+    chown -R nodejs:nodejs /app
+
+WORKDIR /app
+
+# Устанавливаем curl для healthcheck
+RUN apk add --no-cache curl
+
+# Копируем только необходимые файлы из builder
+COPY --from=builder --chown=nodejs:nodejs /app/06_event-relay/dist ./dist
+COPY --from=builder --chown=nodejs:nodejs /app/06_event-relay/node_modules ./node_modules
+COPY --from=builder --chown=nodejs:nodejs /app/contracts/dist ./contracts/dist
+COPY --from=builder --chown=nodejs:nodejs /app/contracts/node_modules ./contracts/node_modules
+
+# Копируем дополнительные файлы
+COPY 06_event-relay/package.json ./package.json
+COPY 06_event-relay/healthcheck.prod.js ./healthcheck.js
+
+# Создаем символические ссылки на shared packages
+RUN ln -s /app/contracts/dist /app/node_modules/@platform/contracts && \
+    ln -s /app/contracts/node_modules /app/contracts/node_modules/.pnpm/node_modules
+
+# Переключаемся на непривилегированного пользователя
+USER nodejs
+
+# Переменные среды для production
+ENV NODE_ENV=production \
+    PORT=3006 \
+    LOG_LEVEL=info \
+    NODE_OPTIONS="--max-old-space-size=512 --enable-source-maps" \
+    METRICS_ENABLED=true \
+    GC_INTERVAL_MS=30000
+
+# Открываем порт
+EXPOSE 3006
+
+# Healthcheck с таймаутами и ретраями
+HEALTHCHECK --interval=30s \
+            --timeout=10s \
+            --start-period=60s \
+            --retries=5 \
+            CMD node healthcheck.js || exit 1
+
+# Graceful shutdown сигналы
+STOPSIGNAL SIGTERM
+
+# Команда запуска с процесс менеджером (если нужно)
+CMD ["node", "--trace-warnings", "dist/main.js"]

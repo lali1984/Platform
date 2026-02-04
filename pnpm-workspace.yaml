@@ -1,0 +1,8 @@
+packages:
+  - 'contracts'
+  - '00_infrastructure'
+  - '01_frontend'
+  - '03_auth-service'
+  - '04_user-service'
+  - '06_event-relay'
+  - '02_bff-gateway'

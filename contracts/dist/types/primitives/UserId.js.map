@@ -1,0 +1,1 @@
+{"version":3,"file":"UserId.js","sourceRoot":"","sources":["../../../src/types/primitives/UserId.ts"],"names":[],"mappings":";;AAUA,4BAEC;AAMD,gDAEC;AAdD;;;GAGG;AACH,SAAgB,QAAQ,CAAC,KAAc;IACrC,OAAO,OAAO,KAAK,KAAK,QAAQ,IAAI,KAAK,CAAC,IAAI,EAAE,CAAC,MAAM,GAAG,CAAC,CAAC;AAC9D,CAAC;AAED;;;GAGG;AACH,SAAgB,kBAAkB,CAAC,EAAU;IAC3C,OAAO,EAAY,CAAC;AACtB,CAAC"}

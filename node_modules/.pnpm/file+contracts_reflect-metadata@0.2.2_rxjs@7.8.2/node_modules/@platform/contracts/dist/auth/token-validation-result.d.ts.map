@@ -1,0 +1,1 @@
+{"version":3,"file":"token-validation-result.d.ts","sourceRoot":"","sources":["../../src/auth/token-validation-result.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,YAAY,EAAE,MAAM,kBAAkB,CAAC;AAEhD,MAAM,WAAW,qBAAqB;IACpC,OAAO,EAAE,OAAO,CAAC;IACjB,IAAI,CAAC,EAAE,YAAY,CAAC;IACpB,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,SAAS,CAAC,EAAE,MAAM,CAAC;CACpB"}

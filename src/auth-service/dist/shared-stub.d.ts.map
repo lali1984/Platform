@@ -1,1 +1,0 @@
-{"version":3,"file":"shared-stub.d.ts","sourceRoot":"","sources":["../src/shared-stub.ts"],"names":[],"mappings":"AACA,eAAO,MAAM,mBAAmB;;;qBAGP,GAAG;;;;CAE3B,CAAC;AAEF,oBAAY,SAAS;IACnB,eAAe,oBAAoB;IACnC,cAAc,mBAAmB;IACjC,YAAY,iBAAiB;IAC7B,YAAY,iBAAiB;CAC9B;AAED,eAAO,MAAM,eAAe,GAAI,MAAM,SAAS,EAAE,QAAQ,MAAM,EAAE,eAAe,MAAM;;;;;;CAEpF,CAAC;AAEH,eAAO,MAAM,qBAAqB,cAC+B,CAAC"}

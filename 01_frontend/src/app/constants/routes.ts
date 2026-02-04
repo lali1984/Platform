@@ -1,0 +1,20 @@
+// src/app/constants/routes.ts
+export const ROUTES = {
+  HOME: '/',
+  NEWS: '/news',
+  KNOWLEDGE: '/knowledge',
+  EDUCATION: '/education',
+  PARTNERSHIP: '/partnership',
+  MY_COMPANY: '/my-company',
+  MY_PROJECTS: '/my-projects',
+  MY_STARTUPS: '/my-startups',
+  SETTINGS: '/settings',
+  LICENSE: '/license',
+  SUPPORT: '/support',
+  PLATFORM_NEWS: '/platform-news',
+  PROFILE: '/profile',
+  EXPERT_PROFILE: '/expert-profile',
+  COMPANY_PROFILE: '/company/:id',
+  CREATE_COMPANY: '/create-company',
+  CREATE_STARTUP: '/create-startup',
+} as const;

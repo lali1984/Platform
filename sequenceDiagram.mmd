@@ -1,0 +1,41 @@
+sequenceDiagram
+    participant F as Frontend
+    participant C as AuthController (presentation)
+    participant U as RegisterUserUseCase (application)
+    participant D as User.create() (domain)
+    participant R as UserRepository (infrastructure)
+
+    F->>C: POST /api/auth/register { email, password }
+    C->>C: class-validator (DTO) → ✅ email, ✅ password ≥ 8
+    C->>U: execute({ email, password })
+    U->>D: User.create({ email, password })
+    D->>D: Email.create() → ✅ формат<br>Password.create() → ✅ сложность
+    D->>R: userRepository.exists({ email })
+    R-->>D: false
+    D-->>U: new User(...)
+    U->>R: userRepository.save(user)
+    R-->>U: savedUser
+    U-->>C: { success: true, user }
+    C-->>F: 201 Created + JWT
+
+
+    graph LR
+    A[auth-service] -->|publishes UserCreatedEvent| K[Kafka]
+    B[profile-service] -->|consumes UserCreatedEvent| K
+    C[notification-service] -->|consumes UserCreatedEvent| K
+    D[analytics-service] -->|consumes UserCreatedEvent| K
+
+    subgraph contracts
+        E[events/] -->|typed TS interfaces| A
+        E -->|typed TS interfaces| B
+        E -->|typed TS interfaces| C
+        E -->|typed TS interfaces| D
+        F[types/] -->|branded types| A
+        F -->|branded types| B
+        F -->|branded types| C
+        G[api/] -->|ApiResponse| A
+        G -->|ApiResponse| B
+    end
+
+    K -->|schema registry| H[Confluent Schema Registry]
+    E -->|Avro schemas generated from TS| H

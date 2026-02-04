@@ -1,0 +1,15 @@
+{
+  "name": "test-minimal-service",
+  "version": "1.0.0",
+  "description": "Minimal test service for infrastructure testing",
+  "main": "test-minimal-service.js",
+  "scripts": {
+    "start": "node test-minimal-service.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

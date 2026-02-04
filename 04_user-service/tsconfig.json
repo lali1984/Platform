@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+
+  "module": "commonjs",
+  "resolveJsonModule": true,
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": true,
+  "verbatimModuleSyntax": false,
+  "baseUrl": ".",
+  "paths": {
+    "@platform/contracts-types": ["../contracts/types/dist/index"],
+    "@platform/contracts-events": ["../contracts/events/dist/index"]
+  },
+  "declaration": true,
+  "removeComments": true,
+  "emitDecoratorMetadata": true,
+  "experimentalDecorators": true,
+  "target": "es2017",
+  "sourceMap": true,
+  "outDir": "./dist",
+  "incremental": true,
+  "skipLibCheck": true,
+  "strictNullChecks": true,
+  "noImplicitAny": true,
+  "strictBindCallApply": true,
+  "strictPropertyInitialization": true,
+  "alwaysStrict": true,
+  "noFallthroughCasesInSwitch": true,
+  "strict": true
+},
+}

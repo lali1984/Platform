@@ -1,0 +1,1928 @@
+
+> auth-service@1.0.0 dev
+> nodemon --exec ts-node src/main.ts
+
+[33m[nodemon] 3.1.11[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: ts,json[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+🔧 Creating DataSource...
+📋 Environment variables:
+  DATABASE_HOST: [90mundefined[39m
+  DATABASE_PORT: [90mundefined[39m
+  DATABASE_USERNAME: [90mundefined[39m
+  DATABASE_PASSWORD: not set
+  DATABASE_NAME: [90mundefined[39m
+  DATABASE_URL: not set
+🔌 Database connection string: postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable
+⚙️ DataSource config: {
+  "type": "postgres",
+  "url": "postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable",
+  "host": "postgres-auth",
+  "port": 5432,
+  "username": "admin",
+  "password": "****",
+  "database": "auth_db",
+  "synchronize": false,
+  "logging": false,
+  "entities": [
+    null,
+    null
+  ],
+  "migrations": [],
+  "subscribers": [],
+  "extra": {
+    "connectionTimeoutMillis": 5000,
+    "query_timeout": 5000,
+    "statement_timeout": 5000,
+    "family": 4
+  }
+}
+🔌 Initializing database connection...
+❌ Database initialization failed: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to initialize dependencies: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to start auth service: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+🔧 Creating DataSource...
+📋 Environment variables:
+  DATABASE_HOST: [90mundefined[39m
+  DATABASE_PORT: [90mundefined[39m
+  DATABASE_USERNAME: [90mundefined[39m
+  DATABASE_PASSWORD: not set
+  DATABASE_NAME: [90mundefined[39m
+  DATABASE_URL: not set
+🔌 Database connection string: postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable
+⚙️ DataSource config: {
+  "type": "postgres",
+  "url": "postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable",
+  "host": "postgres-auth",
+  "port": 5432,
+  "username": "admin",
+  "password": "****",
+  "database": "auth_db",
+  "synchronize": false,
+  "logging": false,
+  "entities": [
+    null,
+    null
+  ],
+  "migrations": [],
+  "subscribers": [],
+  "extra": {
+    "connectionTimeoutMillis": 5000,
+    "query_timeout": 5000,
+    "statement_timeout": 5000,
+    "family": 4
+  }
+}
+🔌 Initializing database connection...
+❌ Database initialization failed: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to initialize dependencies: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to start auth service: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+🔧 Creating DataSource...
+📋 Environment variables:
+  DATABASE_HOST: [90mundefined[39m
+  DATABASE_PORT: [90mundefined[39m
+  DATABASE_USERNAME: [90mundefined[39m
+  DATABASE_PASSWORD: not set
+  DATABASE_NAME: [90mundefined[39m
+  DATABASE_URL: not set
+🔌 Database connection string: postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable
+⚙️ DataSource config: {
+  "type": "postgres",
+  "url": "postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable",
+  "host": "postgres-auth",
+  "port": 5432,
+  "username": "admin",
+  "password": "****",
+  "database": "auth_db",
+  "synchronize": false,
+  "logging": false,
+  "entities": [
+    null,
+    null
+  ],
+  "migrations": [],
+  "subscribers": [],
+  "extra": {
+    "connectionTimeoutMillis": 5000,
+    "query_timeout": 5000,
+    "statement_timeout": 5000,
+    "family": 4
+  }
+}
+🔌 Initializing database connection...
+❌ Database initialization failed: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to initialize dependencies: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to start auth service: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+🔧 Creating DataSource...
+📋 Environment variables:
+  DATABASE_HOST: [90mundefined[39m
+  DATABASE_PORT: [90mundefined[39m
+  DATABASE_USERNAME: [90mundefined[39m
+  DATABASE_PASSWORD: not set
+  DATABASE_NAME: [90mundefined[39m
+  DATABASE_URL: not set
+🔌 Database connection string: postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable
+⚙️ DataSource config: {
+  "type": "postgres",
+  "url": "postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable",
+  "host": "postgres-auth",
+  "port": 5432,
+  "username": "admin",
+  "password": "****",
+  "database": "auth_db",
+  "synchronize": false,
+  "logging": false,
+  "entities": [
+    null,
+    null
+  ],
+  "migrations": [],
+  "subscribers": [],
+  "extra": {
+    "connectionTimeoutMillis": 5000,
+    "query_timeout": 5000,
+    "statement_timeout": 5000,
+    "family": 4
+  }
+}
+🔌 Initializing database connection...
+❌ Database initialization failed: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to initialize dependencies: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to start auth service: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/event-publishers/OutboxEventPublisher.ts(15,49): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(entityLikeArray: DeepPartial<OutboxEvent>[]): OutboxEvent[]', gave the following error.
+    Object literal may only specify known properties, and 'id' does not exist in type 'DeepPartial<OutboxEvent>[]'.
+  Overload 2 of 3, '(entityLike: DeepPartial<OutboxEvent>): OutboxEvent', gave the following error.
+    Object literal may only specify known properties, but 'createdAt' does not exist in type 'DeepPartial<OutboxEvent>'. Did you mean to write 'created_at'?
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2769 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+🔧 Creating DataSource...
+📋 Environment variables:
+  DATABASE_HOST: [90mundefined[39m
+  DATABASE_PORT: [90mundefined[39m
+  DATABASE_USERNAME: [90mundefined[39m
+  DATABASE_PASSWORD: not set
+  DATABASE_NAME: [90mundefined[39m
+  DATABASE_URL: not set
+🔌 Database connection string: postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable
+⚙️ DataSource config: {
+  "type": "postgres",
+  "url": "postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable",
+  "host": "postgres-auth",
+  "port": 5432,
+  "username": "admin",
+  "password": "****",
+  "database": "auth_db",
+  "synchronize": false,
+  "logging": false,
+  "entities": [
+    null,
+    null
+  ],
+  "migrations": [],
+  "subscribers": [],
+  "extra": {
+    "connectionTimeoutMillis": 5000,
+    "query_timeout": 5000,
+    "statement_timeout": 5000,
+    "family": 4
+  }
+}
+🔌 Initializing database connection...
+❌ Database initialization failed: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to initialize dependencies: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to start auth service: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+🔧 Creating DataSource...
+📋 Environment variables:
+  DATABASE_HOST: [90mundefined[39m
+  DATABASE_PORT: [90mundefined[39m
+  DATABASE_USERNAME: [90mundefined[39m
+  DATABASE_PASSWORD: not set
+  DATABASE_NAME: [90mundefined[39m
+  DATABASE_URL: not set
+🔌 Database connection string: postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable
+⚙️ DataSource config: {
+  "type": "postgres",
+  "url": "postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable",
+  "host": "postgres-auth",
+  "port": 5432,
+  "username": "admin",
+  "password": "****",
+  "database": "auth_db",
+  "synchronize": false,
+  "logging": false,
+  "entities": [
+    null,
+    null
+  ],
+  "migrations": [],
+  "subscribers": [],
+  "extra": {
+    "connectionTimeoutMillis": 5000,
+    "query_timeout": 5000,
+    "statement_timeout": 5000,
+    "family": 4
+  }
+}
+🔌 Initializing database connection...
+❌ Database initialization failed: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to initialize dependencies: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to start auth service: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/event-publishers/OutboxEventPublisher.ts(15,49): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(entityLikeArray: DeepPartial<OutboxEvent>[]): OutboxEvent[]', gave the following error.
+    Object literal may only specify known properties, and 'id' does not exist in type 'DeepPartial<OutboxEvent>[]'.
+  Overload 2 of 3, '(entityLike: DeepPartial<OutboxEvent>): OutboxEvent', gave the following error.
+    Object literal may only specify known properties, but 'created_at' does not exist in type 'DeepPartial<OutboxEvent>'. Did you mean to write 'createdAt'?
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2769 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(72,75): error TS2345: Argument of type 'OutboxEventPublisher' is not assignable to parameter of type 'EventPublisher'.
+  The types returned by 'publish(...)' are incompatible between these types.
+    Type 'Promise<void>' is not assignable to type 'Promise<boolean>'.
+      Type 'void' is not assignable to type 'boolean'.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2345 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+(node:50269) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+🔧 Creating DataSource...
+📋 Environment variables:
+  DATABASE_HOST: [90mundefined[39m
+  DATABASE_PORT: [90mundefined[39m
+  DATABASE_USERNAME: [90mundefined[39m
+  DATABASE_PASSWORD: not set
+  DATABASE_NAME: [90mundefined[39m
+  DATABASE_URL: not set
+🔌 Database connection string: postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable
+⚙️ DataSource config: {
+  "type": "postgres",
+  "url": "postgresql://admin:****@postgres-auth:5432/auth_db?sslmode=disable",
+  "host": "postgres-auth",
+  "port": 5432,
+  "username": "admin",
+  "password": "****",
+  "database": "auth_db",
+  "synchronize": false,
+  "logging": false,
+  "entities": [
+    null,
+    null
+  ],
+  "migrations": [],
+  "subscribers": [],
+  "extra": {
+    "connectionTimeoutMillis": 5000,
+    "query_timeout": 5000,
+    "statement_timeout": 5000,
+    "family": 4
+  }
+}
+🔌 Initializing database connection...
+❌ Database initialization failed: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to initialize dependencies: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+❌ Failed to start auth service: Error: getaddrinfo ENOTFOUND postgres-auth
+[90m    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:121:26)[39m {
+  errno: [33m-3008[39m,
+  code: [32m'ENOTFOUND'[39m,
+  syscall: [32m'getaddrinfo'[39m,
+  hostname: [32m'postgres-auth'[39m
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/application/use-cases/RegisterUser.use-case.ts(4,43): error TS2307: Cannot find module '../../../contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2307 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/application/use-cases/RegisterUser.use-case.ts(4,43): error TS2307: Cannot find module '../../../contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2307 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/application/use-cases/RegisterUser.use-case.ts(4,43): error TS2307: Cannot find module 'contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2307 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/application/use-cases/RegisterUser.use-case.ts(4,43): error TS2307: Cannot find module 'contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2307 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/application/use-cases/RegisterUser.use-case.ts(4,43): error TS2307: Cannot find module 'contracts/events/src/auth/user-registered.event' or its corresponding type declarations.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2307 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/domain/entities/User.ts(3,44): error TS2307: Cannot find module '@platform/contracts-types' or its corresponding type declarations.
+src/domain/entities/User.ts(4,36): error TS2307: Cannot find module '@platform/contracts-types' or its corresponding type declarations.
+src/domain/entities/User.ts(5,44): error TS2307: Cannot find module '@platform/contracts-types' or its corresponding type declarations.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2307, 2307, 2307 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(2,18): error TS2307: Cannot find module 'cors' or its corresponding type declarations.
+src/main.ts(3,20): error TS2307: Cannot find module 'helmet' or its corresponding type declarations.
+src/main.ts(4,20): error TS2307: Cannot find module 'dotenv' or its corresponding type declarations.
+src/main.ts(30,16): error TS7006: Parameter 'origin' implicitly has an 'any' type.
+src/main.ts(30,24): error TS7006: Parameter 'callback' implicitly has an 'any' type.
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [
+    2307, 2307,
+    2307, 7006,
+    7006, 6133,
+    6133
+  ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(2,18): error TS2307: Cannot find module 'cors' or its corresponding type declarations.
+src/main.ts(3,20): error TS2307: Cannot find module 'helmet' or its corresponding type declarations.
+src/main.ts(4,20): error TS2307: Cannot find module 'dotenv' or its corresponding type declarations.
+src/main.ts(30,16): error TS7006: Parameter 'origin' implicitly has an 'any' type.
+src/main.ts(30,24): error TS7006: Parameter 'callback' implicitly has an 'any' type.
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [
+    2307, 2307,
+    2307, 7006,
+    7006, 6133,
+    6133
+  ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+(node:50269) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+(node:50269) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/main.ts(101,29): error TS6133: 'req' is declared but its value is never read.
+src/main.ts(101,74): error TS6133: 'next' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6133 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,1): error TS6133: 'parseISO8601Date' is declared but its value is never read.
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(11,32): error TS6138: Property 'dataSource' is declared but its value is never read.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 6133, 6138 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+Error: Cannot find module '@platform/contracts-types'
+Require stack:
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/infrastructure/persistence/repositories/TypeORMUserRepository.ts
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/main.ts
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1420:15)
+    at Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)
+    at Module._load (node:internal/modules/cjs/loader:1226:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1503:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (/Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts:3:1) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts',
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/infrastructure/persistence/repositories/TypeORMUserRepository.ts',
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/main.ts'
+  ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+Error: Cannot find module '@platform/contracts-types'
+Require stack:
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/infrastructure/persistence/repositories/TypeORMUserRepository.ts
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/main.ts
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1420:15)
+    at Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)
+    at Module._load (node:internal/modules/cjs/loader:1226:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1503:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (/Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts:3:1) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts',
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/infrastructure/persistence/repositories/TypeORMUserRepository.ts',
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/main.ts'
+  ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/infrastructure/persistence/repositories/TypeORMUserRepository.ts(6,34): error TS2307: Cannot find module '@platform/contracts-types' or its corresponding type declarations.
+
+    at createTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1892:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14) {
+  diagnosticCodes: [ 2307 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/main.ts`[39m
+Error: Cannot find module '@platform/contracts-types'
+Require stack:
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/infrastructure/persistence/repositories/TypeORMUserRepository.ts
+- /Users/valery/Projects/platform-ecosystem/03_auth-service/src/main.ts
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1420:15)
+    at Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (/Users/valery/Projects/platform-ecosystem/03_auth-service/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)
+    at Module._load (node:internal/modules/cjs/loader:1226:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1503:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (/Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts:3:1) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/domain/entities/User.ts',
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/infrastructure/persistence/repositories/TypeORMUserRepository.ts',
+    '/Users/valery/Projects/platform-ecosystem/03_auth-service/src/main.ts'
+  ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m

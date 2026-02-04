@@ -1,0 +1,38 @@
+export declare class UserProfileEntity {
+    id: string;
+    userId: string;
+    email: string | null;
+    firstName: string | null;
+    lastName: string | null;
+    displayName: string | null;
+    avatarUrl: string | null;
+    bio: string | null;
+    phone: string | null;
+    dateOfBirth: Date | null;
+    gender: string | null;
+    status: string;
+    isVerified: boolean;
+    country: string | null;
+    region: string | null;
+    city: string | null;
+    timezone: string | null;
+    locale: string;
+    jobTitle: string | null;
+    company: string | null;
+    department: string | null;
+    website: string | null;
+    socialLinks: Record<string, string> | null;
+    profileCompletionPercentage: number;
+    lastActiveAt: Date | null;
+    profileViews: number;
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt: Date | null;
+    createdBy: string | null;
+    updatedBy: string | null;
+    metadata: Record<string, any>;
+    displayNameForIndex: string | null;
+    countryForIndex: string | null;
+    cityForIndex: string | null;
+    lastActiveAtForIndex: Date | null;
+}
