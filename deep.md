@@ -8,6 +8,13 @@ valery@MacBook-Pro-Valery platform-ecosystem % tree -I 'node_modules|dist|build|
 │   │   ├── proxy_params
 │   │   ├── sites-enabled
 │   │   └── ssl
+│   │       ├── ca.crt
+│   │       ├── ca.key
+│   │       ├── ca.srl
+│   │       ├── dhparam.pem
+│   │       ├── platform-ecosystem.crt
+│   │       ├── platform-ecosystem.csr
+│   │       └── platform-ecosystem.key
 │   ├── databases
 │   │   └── postgres
 │   │       ├── create-db-users.sql
@@ -35,6 +42,8 @@ valery@MacBook-Pro-Valery platform-ecosystem % tree -I 'node_modules|dist|build|
 │       └── prometheus
 │           └── prometheus.yml
 ├── 01_frontend
+│   ├── 01_frontend
+│   │   └── Dockerfile.production 
 │   ├── Dockerfile
 │   ├── README.md
 │   ├── guidelines
@@ -139,11 +148,12 @@ valery@MacBook-Pro-Valery platform-ecosystem % tree -I 'node_modules|dist|build|
 │   │   │   └── services
 │   │   │       └── api.ts
 │   │   ├── main.tsx
-│   │   └── styles
-│   │       ├── fonts.css
-│   │       ├── index.css
-│   │       ├── tailwind.css
-│   │       └── theme.css
+│   │   ├── styles
+│   │   │   ├── fonts.css
+│   │   │   ├── index.css
+│   │   │   ├── tailwind.css
+│   │   │   └── theme.css
+│   │   └── vite-env.d.ts 
 │   ├── tsconfig.json
 │   ├── tsconfig.node.json
 │   └── vite.config.ts
@@ -245,7 +255,6 @@ valery@MacBook-Pro-Valery platform-ecosystem % tree -I 'node_modules|dist|build|
 │   │   │   │   │   ├── User.entity.ts
 │   │   │   │   │   └── UserRole.entity.ts
 │   │   │   │   └── repositories
-│   │   │   │       ├── InMemoryUserRepository.ts
 │   │   │   │       └── TypeORMUserRepository.ts
 │   │   │   └── services
 │   │   │       ├── JwtTokenService.ts
@@ -425,6 +434,7 @@ valery@MacBook-Pro-Valery platform-ecosystem % tree -I 'node_modules|dist|build|
 │   └── tsconfig.json
 ├── deep.md
 ├── docker-compose.health.yml
+├── docker-compose.prod.yml
 ├── docker-compose.yml
 ├── docs
 ├── healthcheck-kafka-exporter.sh
@@ -452,6 +462,7 @@ valery@MacBook-Pro-Valery platform-ecosystem % tree -I 'node_modules|dist|build|
 │   ├── deploy-production.sh
 │   ├── fix-remaining-imports.sh
 │   ├── full-platform-test.sh
+│   ├── generate-ssl-certs.sh
 │   ├── nginx.test.conf
 │   ├── package.json
 │   ├── platform-health-check.sh
@@ -467,5 +478,5 @@ valery@MacBook-Pro-Valery platform-ecosystem % tree -I 'node_modules|dist|build|
 │   └── new-service-template.md
 └── test-contracts.mjs
 
-140 directories, 327 files
+141 directories, 337 files
 valery@MacBook-Pro-Valery platform-ecosystem % 

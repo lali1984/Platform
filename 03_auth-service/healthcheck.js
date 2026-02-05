@@ -1,61 +1,88 @@
 const http = require('http');
+const os = require('os');
 
-const options = {
-  hostname: 'localhost',
-  port: 3000,
-  path: '/api/auth/health',
-  timeout: 5000,
+const config = {
+  hostname: process.env.HOST || 'localhost',
+  port: process.env.PORT || 3000,
+  path: '/health',
+  timeout: 10000, // 10 seconds
   method: 'GET',
   headers: {
-    'User-Agent': 'Docker-HealthCheck/1.0'
+    'User-Agent': 'Docker-HealthCheck/1.0',
+    'Accept': 'application/json',
+    'X-Health-Check': 'true'
   }
 };
 
-const req = http.request(options, (res) => {
-  console.log(`Health check: Status ${res.statusCode}`);
+console.log(`Health check for ${config.hostname}:${config.port}${config.path}`);
+
+const req = http.request(config, (res) => {
+  console.log(`Status: ${res.statusCode}, Headers: ${JSON.stringify(res.headers)}`);
   
-  if (res.statusCode === 200) {
-    let data = '';
-    res.on('data', (chunk) => {
-      data += chunk;
-    });
-    
-    res.on('end', () => {
-      try {
-        const result = JSON.parse(data);
-        if (result.status === 'ok' || result.success === true || result.healthy === true) {
-          console.log('Health check passed');
-          process.exit(0);
-        } else {
-          console.error('Health check failed: Invalid response body', result);
-          process.exit(1);
-        }
-      } catch (e) {
-        console.log('Health check passed (non-JSON response)');
+  let data = '';
+  res.on('data', (chunk) => {
+    data += chunk;
+  });
+  
+  res.on('end', () => {
+    try {
+      const result = JSON.parse(data);
+      
+      // Validate health check response
+      const isHealthy = (
+        res.statusCode === 200 &&
+        result.status === 'healthy' &&
+        result.timestamp &&
+        result.services &&
+        result.services.database === 'connected'
+      );
+      
+      if (isHealthy) {
+        console.log('✅ Health check passed:', {
+          status: result.status,
+          timestamp: result.timestamp,
+          services: result.services
+        });
         process.exit(0);
+      } else {
+        console.error('❌ Health check failed. Response:', {
+          statusCode: res.statusCode,
+          body: result
+        });
+        process.exit(1);
       }
-    });
-  } else {
-    console.error(`Health check failed: Status ${res.statusCode}`);
-    process.exit(1);
-  }
+    } catch (e) {
+      console.error('❌ Invalid JSON response:', e.message, 'Raw data:', data);
+      process.exit(1);
+    }
+  });
 });
 
 req.on('error', (err) => {
-  console.error('Health check error:', err.message);
+  console.error('❌ Health check error:', {
+    message: err.message,
+    code: err.code,
+    syscall: err.syscall,
+    address: err.address,
+    port: err.port
+  });
   process.exit(1);
 });
 
 req.on('timeout', () => {
-  console.error('Health check timeout');
+  console.error('❌ Health check timeout after', config.timeout, 'ms');
   req.destroy();
   process.exit(1);
 });
 
-req.end();
-
-// Таймаут на весь запрос
-setTimeout(() => {
-  console.error('Health check overall timeout');
+// Set overall timeout
+const overallTimeout = setTimeout(() => {
+  console.error('❌ Health check overall timeout');
   process.exit(1);
-}, 8000);
+}, 15000);
+
+req.on('close', () => {
+  clearTimeout(overallTimeout);
+});
+
+req.end();
