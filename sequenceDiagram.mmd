@@ -1,40 +1,63 @@
-sequenceDiagram
-    participant F as Frontend
-    participant C as AuthController (presentation)
-    participant U as RegisterUserUseCase (application)
-    participant D as User.create() (domain)
-    participant R as UserRepository (infrastructure)
-
-    F->>C: POST /api/auth/register { email, password }
-    C->>C: class-validator (DTO) → ✅ email, ✅ password ≥ 8
-    C->>U: execute({ email, password })
-    U->>D: User.create({ email, password })
-    D->>D: Email.create() → ✅ формат<br>Password.create() → ✅ сложность
-    D->>R: userRepository.exists({ email })
-    R-->>D: false
-    D-->>U: new User(...)
-    U->>R: userRepository.save(user)
-    R-->>U: savedUser
-    U-->>C: { success: true, user }
-    C-->>F: 201 Created + JWT
-
-    graph LR
-    A[auth-service] -->|publishes UserCreatedEvent| K[Kafka]
-    B[profile-service] -->|consumes UserCreatedEvent| K
-    C[notification-service] -->|consumes UserCreatedEvent| K
-    D[analytics-service] -->|consumes UserCreatedEvent| K
-
-    subgraph contracts
-        E[events/] -->|typed TS interfaces| A
-        E -->|typed TS interfaces| B
-        E -->|typed TS interfaces| C
-        E -->|typed TS interfaces| D
-        F[types/] -->|branded types| A
-        F -->|branded types| B
-        F -->|branded types| C
-        G[api/] -->|ApiResponse| A
-        G -->|ApiResponse| B
+graph TB
+    subgraph "Клиентский слой"
+        Browser[Браузер/Frontend]
     end
-
-    K -->|schema registry| H[Confluent Schema Registry]
-    E -->|Avro schemas generated from TS| H
+    
+    subgraph "API Gateway (Nginx)"
+        APIGW[API Gateway:443]
+        HealthGW[Health: /health]
+        MetricsGW[Metrics: /metrics]
+    end
+    
+    subgraph "BFF Layer"
+        BFF[BFF Gateway]
+        HealthBFF[Health: ✓]
+        AuthBFF[Auth Middleware]
+        CacheBFF[Redis Cache]
+    end
+    
+    subgraph "Сервисы"
+        Auth[Auth Service]
+        User[User Service]
+        Events[Event Relay]
+    end
+    
+    subgraph "Базы данных"
+        DBAuth[(PostgreSQL: auth_db)]
+        DBUser[(PostgreSQL: user_db)]
+        Redis[(Redis)]
+        Kafka[(Apache Kafka)]
+    end
+    
+    subgraph "Мониторинг"
+        Prometheus[Prometheus]
+        Grafana[Grafana]
+        Alert[AlertManager]
+    end
+    
+    Browser --> APIGW
+    APIGW --> BFF
+    APIGW --> Browser
+    
+    BFF --> Auth
+    BFF --> User
+    
+    Auth --> DBAuth
+    Auth --> Redis
+    Auth --> Kafka
+    
+    User --> DBUser
+    User --> Redis
+    User --> Kafka
+    
+    Events --> DBAuth
+    Events --> DBUser
+    Events --> Kafka
+    
+    Auth -->|метрики| Prometheus
+    User -->|метрики| Prometheus
+    BFF -->|метрики| Prometheus
+    Events -->|метрики| Prometheus
+    
+    Prometheus --> Grafana
+    Prometheus --> Alert
