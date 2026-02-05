@@ -18,7 +18,6 @@ sequenceDiagram
     U-->>C: { success: true, user }
     C-->>F: 201 Created + JWT
 
-
     graph LR
     A[auth-service] -->|publishes UserCreatedEvent| K[Kafka]
     B[profile-service] -->|consumes UserCreatedEvent| K
