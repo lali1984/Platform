@@ -1,6 +1,5 @@
-// 02_bff-gateway/src/presentation/controllers/auth.controller.ts
 import { Request, Response } from 'express';
-import { AuthUserUseCase } from '../../application/use-cases/auth-user.use-case';
+import { AuthUserUseCase } from '../../application/use-cases/auth-user';
 import { ApiResponse } from '../../domain/value-objects/api-response.vo';
 import { validateBody } from '../middleware/validation.middleware';
 import { RegisterSchema, LoginSchema } from '../../shared/validation/chemas';

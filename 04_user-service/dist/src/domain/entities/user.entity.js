@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = exports.UserStatus = void 0;
-const aggregate_root_base_1 = require("../base/aggregate-root.base");
+const aggregate_root_1 = require("../base/aggregate-root");
 const contracts_1 = require("@platform/contracts");
 const uuid_1 = require("uuid");
 var UserStatus;
@@ -11,7 +11,7 @@ var UserStatus;
     UserStatus["SUSPENDED"] = "SUSPENDED";
     UserStatus["DELETED"] = "DELETED";
 })(UserStatus || (exports.UserStatus = UserStatus = {}));
-class User extends aggregate_root_base_1.AggregateRoot {
+class User extends aggregate_root_1.AggregateRoot {
     constructor(props) {
         super(props);
     }

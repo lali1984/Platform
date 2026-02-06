@@ -1,8 +1,7 @@
-// ./04_user-service/src/presentation/controllers/metrics.controller.ts
 import { Controller, Get, Res } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { Response } from 'express';
-import { MetricsService } from '../../infrastructure/metrics/metrics.service';
+import { MetricsService } from '../../infrastructure/metrics/metrics';
 
 @ApiTags('Metrics')
 @Controller('metrics')

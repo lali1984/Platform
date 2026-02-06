@@ -15,15 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
-const create_user_use_case_1 = require("../../application/use-cases/create-user.use-case");
-const get_user_use_case_1 = require("../../application/use-cases/get-user.use-case");
-const update_user_use_case_1 = require("../../application/use-cases/update-user.use-case");
-const delete_user_use_case_1 = require("../../application/use-cases/delete-user.use-case");
-const list_users_use_case_1 = require("../../application/use-cases/list-users.use-case");
-const create_user_dto_1 = require("../../application/dto/create-user.dto");
-const update_user_dto_1 = require("../../application/dto/update-user.dto");
+const create_user_1 = require("../../application/use-cases/create-user");
+const get_user_1 = require("../../application/use-cases/get-user");
+const update_user_1 = require("../../application/use-cases/update-user");
+const delete_user_1 = require("../../application/use-cases/delete-user");
+const list_users_1 = require("../../application/use-cases/list-users");
+const create_user_2 = require("../../application/dto/create-user");
+const update_user_2 = require("../../application/dto/update-user");
 const user_response_dto_1 = require("../dto/user-response.dto");
-const user_mapper_1 = require("../../application/mappers/user.mapper");
+const user_1 = require("../../application/mappers/user");
 let UserController = class UserController {
     constructor(createUserUseCase, getUserUseCase, updateUserUseCase, deleteUserUseCase, listUsersUseCase) {
         this.createUserUseCase = createUserUseCase;
@@ -34,15 +34,15 @@ let UserController = class UserController {
     }
     async createUser(dto) {
         const user = await this.createUserUseCase.execute(dto);
-        return user_mapper_1.UserMapper.toResponse(user);
+        return user_1.UserMapper.toResponse(user);
     }
     async getUser(id) {
         const user = await this.getUserUseCase.execute(id);
-        return user_mapper_1.UserMapper.toResponse(user);
+        return user_1.UserMapper.toResponse(user);
     }
     async updateUser(id, dto) {
         const user = await this.updateUserUseCase.execute(id, dto);
-        return user_mapper_1.UserMapper.toResponse(user);
+        return user_1.UserMapper.toResponse(user);
     }
     async deleteUser(id) {
         await this.deleteUserUseCase.execute(id);
@@ -51,7 +51,7 @@ let UserController = class UserController {
         const query = { limit, offset, status, search };
         const result = await this.listUsersUseCase.execute(query);
         return {
-            users: result.users.map(user => user_mapper_1.UserMapper.toResponse(user)),
+            users: result.users.map(user => user_1.UserMapper.toResponse(user)),
             total: result.total,
             page: result.page,
             limit: result.limit,
@@ -69,7 +69,7 @@ __decorate([
     (0, common_1.UsePipes)(new common_1.ValidationPipe({ transform: true, whitelist: true })),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_user_dto_1.CreateUserDto]),
+    __metadata("design:paramtypes", [create_user_2.CreateUserDto]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "createUser", null);
 __decorate([
@@ -93,7 +93,7 @@ __decorate([
     __param(0, (0, common_1.Param)('id', common_1.ParseUUIDPipe)),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, update_user_dto_1.UpdateUserDto]),
+    __metadata("design:paramtypes", [String, update_user_2.UpdateUserDto]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "updateUser", null);
 __decorate([
@@ -127,10 +127,10 @@ __decorate([
 exports.UserController = UserController = __decorate([
     (0, swagger_1.ApiTags)('Users'),
     (0, common_1.Controller)('users'),
-    __metadata("design:paramtypes", [create_user_use_case_1.CreateUserUseCase,
-        get_user_use_case_1.GetUserUseCase,
-        update_user_use_case_1.UpdateUserUseCase,
-        delete_user_use_case_1.DeleteUserUseCase,
-        list_users_use_case_1.ListUsersUseCase])
+    __metadata("design:paramtypes", [create_user_1.CreateUserUseCase,
+        get_user_1.GetUserUseCase,
+        update_user_1.UpdateUserUseCase,
+        delete_user_1.DeleteUserUseCase,
+        list_users_1.ListUsersUseCase])
 ], UserController);
 //# sourceMappingURL=user.controller.js.map

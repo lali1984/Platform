@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.KafkaBootstrapService = void 0;
 const common_1 = require("@nestjs/common");
 const contracts_1 = require("@platform/contracts");
-const handle_user_registered_event_use_case_1 = require("../../application/use-cases/handle-user-registered-event.use-case");
+const handle_user_registered_event_1 = require("../../application/use-cases/handle-user-registered-event");
 let KafkaBootstrapService = KafkaBootstrapService_1 = class KafkaBootstrapService {
     constructor(kafkaConsumer, kafkaProducer, handleUserRegisteredEvent) {
         this.kafkaConsumer = kafkaConsumer;
@@ -280,6 +280,6 @@ exports.KafkaBootstrapService = KafkaBootstrapService = KafkaBootstrapService_1 
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [contracts_1.KafkaConsumerService,
         contracts_1.KafkaProducerService,
-        handle_user_registered_event_use_case_1.HandleUserRegisteredEventUseCase])
+        handle_user_registered_event_1.HandleUserRegisteredEventUseCase])
 ], KafkaBootstrapService);
 //# sourceMappingURL=kafka-bootstrap.service.js.map

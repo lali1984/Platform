@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { IAuthClient } from '../../domain/ports/auth-client.port';
+import { IAuthClient } from '../../domain/ports/auth-client';
 
 export class AuthMiddleware {
   constructor(private readonly authClient: IAuthClient) {}

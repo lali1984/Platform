@@ -7,20 +7,20 @@ import morgan from 'morgan';
 
 // Infrastructure
 import { environment } from './infrastructure/config/environment';
-import { bffConfig } from './infrastructure/config/bff.config';
-import { AuthHttpClient } from './infrastructure/http-clients/auth-http.client';
-import { UserHttpClient } from './infrastructure/http-clients/user-http.client';
+import { bffConfig } from './infrastructure/config/bff';
+import { AuthHttpClient } from './infrastructure/http-clients/auth-client';
+import { UserHttpClient } from './infrastructure/http-clients/user-client';
 //import { InMemoryCacheAdapter } from './infrastructure/cache/in-memory-cache.adapter';
-import { RedisCacheAdapter } from './infrastructure/cache/redis-cache.adapter'; // Убедись, что этот файл создан
+import { RedisCacheAdapter } from './infrastructure/cache/redis-cache'; // Убедись, что этот файл создан
 
 // Domain & Application
-import { GetUserProfileUseCase } from './application/use-cases/get-user-profile.use-case';
-import { AuthUserUseCase } from './application/use-cases/auth-user.use-case';
+import { GetUserProfileUseCase } from './application/use-cases/get-user-profile';
+import { AuthUserUseCase } from './application/use-cases/auth-user';
 
 // Presentation
 import { UserController } from './presentation/controllers/user.controller';
 import { AuthMiddleware } from './presentation/middleware/auth.middleware';
-import { ApiRoutes } from './presentation/routes/api.routes';
+import { ApiRoutes } from './presentation/routes/api';
 import { ErrorHandlerMiddleware } from './presentation/middleware/error-handler.middleware';
 import { AuthController } from "./presentation/controllers/auth.controller";
 

@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserResponseDto = void 0;
 const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
-const user_entity_1 = require("../../domain/entities/user.entity");
+const user_profile_1 = require("../../domain/entities/user-profile");
 class UserResponseDto {
 }
 exports.UserResponseDto = UserResponseDto;
@@ -54,8 +54,8 @@ __decorate([
     __metadata("design:type", String)
 ], UserResponseDto.prototype, "avatarUrl", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)({ example: 'ACTIVE', enum: user_entity_1.UserStatus }),
-    (0, class_validator_1.IsEnum)(user_entity_1.UserStatus),
+    (0, swagger_1.ApiProperty)({ example: 'ACTIVE', enum: user_profile_1.UserStatus }),
+    (0, class_validator_1.IsEnum)(user_profile_1.UserStatus),
     __metadata("design:type", String)
 ], UserResponseDto.prototype, "status", void 0);
 __decorate([

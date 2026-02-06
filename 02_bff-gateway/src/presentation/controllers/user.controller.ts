@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { GetUserProfileUseCase } from '../../application/use-cases/get-user-profile.use-case';
+import { GetUserProfileUseCase } from '../../application/use-cases/get-user-profile';
 import { ApiResponse } from '../../domain/value-objects/api-response.vo';
 
 export class UserController {

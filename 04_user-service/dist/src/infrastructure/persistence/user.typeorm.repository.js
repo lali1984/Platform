@@ -18,7 +18,7 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const user_profile_entity_1 = require("./user-profile.entity");
-const user_mapper_1 = require("../../application/mappers/user.mapper");
+const user_1 = require("../../application/mappers/user");
 let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
     constructor(repository) {
         this.repository = repository;
@@ -29,7 +29,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
             const entity = await this.repository.findOne({
                 where: { id },
             });
-            return entity ? user_mapper_1.UserMapper.toDomain(entity) : null;
+            return entity ? user_1.UserMapper.toDomain(entity) : null;
         }
         catch (error) {
             this.logger.error(`Failed to find user by ID ${id}:`, error);
@@ -41,7 +41,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
             const entity = await this.repository.findOne({
                 where: { email },
             });
-            return entity ? user_mapper_1.UserMapper.toDomain(entity) : null;
+            return entity ? user_1.UserMapper.toDomain(entity) : null;
         }
         catch (error) {
             this.logger.error(`Failed to find user by email ${email}:`, error);
@@ -53,7 +53,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
             const entity = await this.repository.findOne({
                 where: { phone },
             });
-            return entity ? user_mapper_1.UserMapper.toDomain(entity) : null;
+            return entity ? user_1.UserMapper.toDomain(entity) : null;
         }
         catch (error) {
             this.logger.error(`Failed to find user by phone ${phone}:`, error);
@@ -72,7 +72,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
             if (entity.userId !== authUserId) {
                 this.logger.warn(`Data integrity issue: entity.userId (${entity.userId}) != authUserId (${authUserId})`);
             }
-            return user_mapper_1.UserMapper.toDomain(entity);
+            return user_1.UserMapper.toDomain(entity);
         }
         catch (error) {
             this.logger.error(`Failed to find user by authUserId ${authUserId}:`, error);
@@ -81,7 +81,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
     }
     async save(user) {
         try {
-            const entity = user_mapper_1.UserMapper.toEntity(user);
+            const entity = user_1.UserMapper.toEntity(user);
             if (!entity.userId) {
                 throw new Error('Cannot save user without userId');
             }
@@ -101,7 +101,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
             if (!existingEntity) {
                 throw new Error(`User not found for update: ${user.id}`);
             }
-            user_mapper_1.UserMapper.updateEntityFromDomain(existingEntity, user);
+            user_1.UserMapper.updateEntityFromDomain(existingEntity, user);
             await this.repository.save(existingEntity);
             this.logger.debug(`User updated: ${user.id}`);
         }
@@ -128,7 +128,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
                 order: { createdAt: 'DESC' },
                 where: { deletedAt: (0, typeorm_2.IsNull)() },
             });
-            return entities.map(entity => user_mapper_1.UserMapper.toDomain(entity));
+            return entities.map(entity => user_1.UserMapper.toDomain(entity));
         }
         catch (error) {
             this.logger.error('Failed to find all users:', error);
@@ -160,7 +160,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
                 take: limit,
                 order: { createdAt: 'DESC' },
             });
-            return entities.map(entity => user_mapper_1.UserMapper.toDomain(entity));
+            return entities.map(entity => user_1.UserMapper.toDomain(entity));
         }
         catch (error) {
             this.logger.error('Failed to find users with filters:', { filters, error });
@@ -227,7 +227,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
                 .take(limit)
                 .orderBy('user.createdAt', 'DESC')
                 .getMany();
-            return entities.map(entity => user_mapper_1.UserMapper.toDomain(entity));
+            return entities.map(entity => user_1.UserMapper.toDomain(entity));
         }
         catch (error) {
             this.logger.error(`Failed to search users with query "${query}":`, error);
@@ -243,7 +243,7 @@ let UserTypormRepository = UserTypormRepository_1 = class UserTypormRepository {
                 order: { deletedAt: 'DESC' },
                 withDeleted: true,
             });
-            return entities.map(entity => user_mapper_1.UserMapper.toDomain(entity));
+            return entities.map(entity => user_1.UserMapper.toDomain(entity));
         }
         catch (error) {
             this.logger.error('Failed to find deleted users:', error);

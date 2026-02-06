@@ -1,6 +1,6 @@
 import { NestMiddleware } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
-import { MetricsService } from '../../infrastructure/metrics/metrics.service';
+import { MetricsService } from '../../infrastructure/metrics/metrics';
 export declare class MetricsMiddleware implements NestMiddleware {
     private readonly metricsService;
     private readonly logger;

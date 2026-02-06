@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { MetricsService } from '../../infrastructure/metrics/metrics.service';
+import { MetricsService } from '../../infrastructure/metrics/metrics';
 export declare class MetricsController {
     private readonly metricsService;
     constructor(metricsService: MetricsService);

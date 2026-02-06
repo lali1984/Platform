@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsString, IsEmail, IsBoolean, IsDate, IsOptional, IsEnum, IsObject } from 'class-validator';
-import { UserStatus } from '../../domain/entities/user.entity';
+import { UserStatus } from '../../domain/entities/user-profile';
 
 export class UserResponseDto {
   @ApiProperty({ example: '123e4567-e89b-12d3-a456-426614174000' })

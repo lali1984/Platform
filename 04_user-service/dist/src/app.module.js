@@ -48,21 +48,21 @@ const typeorm_1 = require("@nestjs/typeorm");
 const config_1 = require("@nestjs/config");
 const contracts_1 = require("@platform/contracts");
 const path = __importStar(require("path"));
-const user_profile_entity_1 = require("./infrastructure/persistence/user-profile.entity");
-const outbox_event_entity_1 = require("./infrastructure/persistence/outbox-event.entity");
+const user_profile_1 = require("./infrastructure/persistence/entities/user-profile");
+const outbox_event_1 = require("./infrastructure/persistence/entities/outbox-event");
 const user_controller_1 = require("./presentation/controllers/user.controller");
 const health_controller_1 = require("./presentation/controllers/health.controller");
-const create_user_use_case_1 = require("./application/use-cases/create-user.use-case");
-const get_user_use_case_1 = require("./application/use-cases/get-user.use-case");
-const update_user_use_case_1 = require("./application/use-cases/update-user.use-case");
-const delete_user_use_case_1 = require("./application/use-cases/delete-user.use-case");
-const list_users_use_case_1 = require("./application/use-cases/list-users.use-case");
-const handle_user_registered_event_use_case_1 = require("./application/use-cases/handle-user-registered-event.use-case");
-const user_typeorm_repository_1 = require("./infrastructure/persistence/user.typeorm.repository");
-const user_mapper_1 = require("./application/mappers/user.mapper");
-const outbox_event_publisher_service_1 = require("./infrastructure/messaging/outbox-event-publisher.service");
-const event_validator_1 = require("./application/validators/event.validator");
-const kafka_bootstrap_service_1 = require("./infrastructure/kafka/kafka-bootstrap.service");
+const create_user_1 = require("./application/use-cases/create-user");
+const get_user_1 = require("./application/use-cases/get-user");
+const update_user_1 = require("./application/use-cases/update-user");
+const delete_user_1 = require("./application/use-cases/delete-user");
+const list_users_1 = require("./application/use-cases/list-users");
+const handle_user_registered_event_1 = require("./application/use-cases/handle-user-registered-event");
+const user_repository_1 = require("./infrastructure/persistence/repository/user.repository");
+const user_1 = require("./application/mappers/user");
+const outbox_publisher_1 = require("./infrastructure/messaging/outbox-publisher");
+const event_validator_1 = require("./application/validators/event-validator");
+const kafka_bootstrap_1 = require("./infrastructure/kafka/kafka-bootstrap");
 const terminus_1 = require("@nestjs/terminus");
 let AppModule = class AppModule {
     constructor(kafkaBootstrapService, configService) {
@@ -169,7 +169,7 @@ exports.AppModule = AppModule = __decorate([
                         username: configService.get('DATABASE_USERNAME', 'admin'),
                         password: configService.get('DATABASE_PASSWORD', 'secret'),
                         database: configService.get('DATABASE_NAME', 'user_db'),
-                        entities: [user_profile_entity_1.UserProfileEntity, outbox_event_entity_1.OutboxEventEntity],
+                        entities: [user_profile_1.UserProfileEntity, outbox_event_1.OutboxEventEntity],
                         migrations: [path.join(__dirname, 'infrastructure/migrations/*.{ts,js}')],
                         migrationsTableName: 'typeorm_migrations_history',
                         migrationsRun: configService.get('RUN_MIGRATIONS', 'false') === 'true',
@@ -190,7 +190,7 @@ exports.AppModule = AppModule = __decorate([
                 },
                 inject: [config_1.ConfigService],
             }),
-            typeorm_1.TypeOrmModule.forFeature([user_profile_entity_1.UserProfileEntity, outbox_event_entity_1.OutboxEventEntity]),
+            typeorm_1.TypeOrmModule.forFeature([user_profile_1.UserProfileEntity, outbox_event_1.OutboxEventEntity]),
         ],
         controllers: [
             user_controller_1.UserController,
@@ -199,22 +199,22 @@ exports.AppModule = AppModule = __decorate([
         providers: [
             {
                 provide: 'UserRepository',
-                useClass: user_typeorm_repository_1.UserTypormRepository,
+                useClass: user_repository_1.UserTypormRepository,
             },
             {
                 provide: 'EventPublisher',
-                useClass: outbox_event_publisher_service_1.OutboxEventPublisher,
+                useClass: outbox_publisher_1.OutboxEventPublisher,
             },
             event_validator_1.EventValidator,
-            create_user_use_case_1.CreateUserUseCase,
-            get_user_use_case_1.GetUserUseCase,
-            update_user_use_case_1.UpdateUserUseCase,
-            delete_user_use_case_1.DeleteUserUseCase,
-            list_users_use_case_1.ListUsersUseCase,
-            handle_user_registered_event_use_case_1.HandleUserRegisteredEventUseCase,
-            user_mapper_1.UserMapper,
-            outbox_event_publisher_service_1.OutboxEventPublisher,
-            kafka_bootstrap_service_1.KafkaBootstrapService,
+            create_user_1.CreateUserUseCase,
+            get_user_1.GetUserUseCase,
+            update_user_1.UpdateUserUseCase,
+            delete_user_1.DeleteUserUseCase,
+            list_users_1.ListUsersUseCase,
+            handle_user_registered_event_1.HandleUserRegisteredEventUseCase,
+            user_1.UserMapper,
+            outbox_publisher_1.OutboxEventPublisher,
+            kafka_bootstrap_1.KafkaBootstrapService,
         ],
         exports: [
             'UserRepository',
@@ -222,7 +222,7 @@ exports.AppModule = AppModule = __decorate([
             contracts_1.KafkaModule,
         ],
     }),
-    __metadata("design:paramtypes", [kafka_bootstrap_service_1.KafkaBootstrapService,
+    __metadata("design:paramtypes", [kafka_bootstrap_1.KafkaBootstrapService,
         config_1.ConfigService])
 ], AppModule);
 //# sourceMappingURL=app.module.js.map

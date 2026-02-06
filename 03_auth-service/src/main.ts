@@ -4,15 +4,15 @@ import helmet from 'helmet';
 import dotenv from 'dotenv';
 import 'reflect-metadata';
 
-import { createDataSource, initializeDatabase } from './infrastructure/config/database.config';
-import { TypeORMUserRepository } from './infrastructure/persistence/repositories/TypeORMUserRepository';
-import { OutboxEventPublisher } from './infrastructure/event-publishers/OutboxEventPublisher';
-import { JwtTokenService } from './infrastructure/services/JwtTokenService';
-import { RegisterUserUseCase } from './application/use-cases/RegisterUser.use-case';
-import { LoginUserUseCase } from './application/use-cases/LoginUser.use-case';
+import { createDataSource, initializeDatabase } from './infrastructure/config/database';
+import { TypeORMUserRepository } from './infrastructure/persistence/repositories/type-orm-user.repository';
+import { OutboxEventPublisher } from './infrastructure/event-publishers/outbox-event-publisher';
+import { JwtTokenService } from './infrastructure/services/jwt-token';
+import { RegisterUserUseCase } from './application/use-cases/register-user.use-case';
+import { LoginUserUseCase } from './application/use-cases/login-user.use-case';
 import { UserResponseMapper } from './application/dto/user-response.dto';
-import { AuthController } from './presentation/controllers/AuthController';
-import { AuthMiddleware } from './presentation/middleware/AuthMiddleware';
+import { AuthController } from './presentation/controllers/auth-controller';
+import { AuthMiddleware } from './presentation/middleware/auth-middleware';
 import { setupRoutes } from './presentation/routes';
 
 dotenv.config();

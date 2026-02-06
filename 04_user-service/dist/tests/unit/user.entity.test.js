@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_entity_1 = require("../../src/domain/entities/user.entity");
+const user_profile_1 = require("../../src/domain/entities/user-profile");
 describe('User Entity', () => {
     describe('creation', () => {
         it('should create a user with valid data', () => {
-            const user = user_entity_1.User.create({
+            const user = user_profile_1.User.create({
                 email: 'test@example.com',
                 firstName: 'John',
                 lastName: 'Doe',
@@ -24,14 +24,14 @@ describe('User Entity', () => {
             expect(user.deletedAt).toBeUndefined();
         });
         it('should throw an error for invalid email', () => {
-            expect(() => user_entity_1.User.create({
+            expect(() => user_profile_1.User.create({
                 email: 'invalid-email',
                 firstName: 'John',
                 lastName: 'Doe',
             })).toThrow('Invalid email provided');
         });
         it('should throw an error for invalid phone', () => {
-            expect(() => user_entity_1.User.create({
+            expect(() => user_profile_1.User.create({
                 email: 'test@example.com',
                 firstName: 'John',
                 lastName: 'Doe',
@@ -42,7 +42,7 @@ describe('User Entity', () => {
     describe('business logic', () => {
         let user;
         beforeEach(() => {
-            user = user_entity_1.User.create({
+            user = user_profile_1.User.create({
                 email: 'test@example.com',
                 firstName: 'John',
                 lastName: 'Doe',

@@ -1,4 +1,4 @@
-import { AggregateRoot } from '../base/aggregate-root.base';
+import { AggregateRoot } from '../base/aggregate-root';
 import { UserId, Email, PhoneNumber, ISO8601Date } from '@platform/contracts';
 export declare enum UserStatus {
     ACTIVE = "ACTIVE",

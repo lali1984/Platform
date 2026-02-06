@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm';
 import { UserEntity } from '../persistence/entities/User.entity';
-import { OutboxEvent } from '../persistence/entities/OutboxEvent.entity';
+import { OutboxEvent } from '../persistence/entities/outbox-event.entity';
 
 export const migrationDataSource = new DataSource({
   type: 'postgres',

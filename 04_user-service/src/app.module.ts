@@ -5,33 +5,32 @@ import { KafkaModule } from '@platform/contracts';
 import * as path from 'path';
 
 // Сущности
-import { UserProfileEntity } from './infrastructure/persistence/user-profile.entity';
-import { OutboxEventEntity } from './infrastructure/persistence/outbox-event.entity';
+import { UserProfileEntity } from './infrastructure/persistence/entities/user-profile';
+import { OutboxEventEntity } from './infrastructure/persistence/entities/outbox-event';
 
 // Контроллеры
 import { UserController } from './presentation/controllers/user.controller';
 import { HealthController } from './presentation/controllers/health.controller';
 
 // Use Cases
-import { CreateUserUseCase } from './application/use-cases/create-user.use-case';
-import { GetUserUseCase } from './application/use-cases/get-user.use-case';
-import { UpdateUserUseCase } from './application/use-cases/update-user.use-case';
-import { DeleteUserUseCase } from './application/use-cases/delete-user.use-case';
-import { ListUsersUseCase } from './application/use-cases/list-users.use-case';
-import { HandleUserRegisteredEventUseCase } from './application/use-cases/handle-user-registered-event.use-case';
+import { CreateUserUseCase } from './application/use-cases/create-user';
+import { GetUserUseCase } from './application/use-cases/get-user';
+import { UpdateUserUseCase } from './application/use-cases/update-user';
+import { DeleteUserUseCase } from './application/use-cases/delete-user';
+import { ListUsersUseCase } from './application/use-cases/list-users';
+import { HandleUserRegisteredEventUseCase } from './application/use-cases/handle-user-registered-event';
 
 // Репозитории
-import { UserTypormRepository } from './infrastructure/persistence/user.typeorm.repository';
+import { UserTypormRepository } from './infrastructure/persistence/repository/user.repository';
 
 // Мапперы
-import { UserMapper } from './application/mappers/user.mapper';
+import { UserMapper } from './application/mappers/user';
 
 // Сервисы
-import { OutboxEventPublisher } from './infrastructure/messaging/outbox-event-publisher.service';
-import { EventValidator } from './application/validators/event.validator';
+import { OutboxEventPublisher } from './infrastructure/messaging/outbox-publisher';
+import { EventValidator } from './application/validators/event-validator';
 // Порты
-import { EventPublisher } from './domain/ports/event-publisher.port';
-import { KafkaBootstrapService } from './infrastructure/kafka/kafka-bootstrap.service';
+import { KafkaBootstrapService } from './infrastructure/kafka/kafka-bootstrap';
 import { TerminusModule } from '@nestjs/terminus';
 
 @Module({

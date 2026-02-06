@@ -4,12 +4,12 @@ const core_1 = require("@nestjs/core");
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
 const app_module_1 = require("./app.module");
-const kafka_bootstrap_service_1 = require("./infrastructure/kafka/kafka-bootstrap.service");
+const kafka_bootstrap_1 = require("./infrastructure/kafka/kafka-bootstrap");
 async function bootstrap() {
     var _a;
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     try {
-        const kafkaBootstrap = app.get(kafka_bootstrap_service_1.KafkaBootstrapService);
+        const kafkaBootstrap = app.get(kafka_bootstrap_1.KafkaBootstrapService);
         console.log('✅ KafkaBootstrapService initialized');
     }
     catch (error) {

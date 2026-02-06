@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { AuthController } from '../controllers/AuthController';
-import { AuthMiddleware } from '../middleware/AuthMiddleware';
+import { AuthController } from '../controllers/auth-controller';
+import { AuthMiddleware } from '../middleware/auth-middleware';
 
 export function setupRoutes(app: any, authController: AuthController, authMiddleware: AuthMiddleware): void {
   const router = Router();

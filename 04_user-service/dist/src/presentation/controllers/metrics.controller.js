@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MetricsController = void 0;
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
-const metrics_service_1 = require("../../infrastructure/metrics/metrics.service");
+const metrics_1 = require("../../infrastructure/metrics/metrics");
 let MetricsController = class MetricsController {
     constructor(metricsService) {
         this.metricsService = metricsService;
@@ -52,6 +52,6 @@ __decorate([
 exports.MetricsController = MetricsController = __decorate([
     (0, swagger_1.ApiTags)('Metrics'),
     (0, common_1.Controller)('metrics'),
-    __metadata("design:paramtypes", [metrics_service_1.MetricsService])
+    __metadata("design:paramtypes", [metrics_1.MetricsService])
 ], MetricsController);
 //# sourceMappingURL=metrics.controller.js.map

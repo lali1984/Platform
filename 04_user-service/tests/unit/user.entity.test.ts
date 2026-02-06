@@ -1,5 +1,5 @@
 // services/user-service/tests/unit/user.entity.test.ts
-import { User } from '../../src/domain/entities/user.entity';
+import { User } from '../../src/domain/entities/user-profile';
 
 describe('User Entity', () => {
   describe('creation', () => {

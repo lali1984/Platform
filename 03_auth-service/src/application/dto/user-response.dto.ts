@@ -1,7 +1,7 @@
 // /Users/valery/Projects/platform-ecosystem/03_auth-service/src/application/dto/user-response.dto.ts
 import { UserAuthData } from '@platform/contracts';
 import { User } from '../../domain/entities/User';
-import { UserRepository } from '../../domain/ports/UserRepository.port';
+import { UserRepository } from '../../domain/ports/user-repository.port';
 
 export type UserResponseDto = UserAuthData;
 

@@ -16,15 +16,15 @@ import {
   DefaultValuePipe
 } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiParam, ApiQuery } from '@nestjs/swagger';
-import { CreateUserUseCase } from '../../application/use-cases/create-user.use-case';
-import { GetUserUseCase } from '../../application/use-cases/get-user.use-case';
-import { UpdateUserUseCase } from '../../application/use-cases/update-user.use-case';
-import { DeleteUserUseCase } from '../../application/use-cases/delete-user.use-case';
-import { ListUsersUseCase, ListUsersQuery } from '../../application/use-cases/list-users.use-case';
-import { CreateUserDto } from '../../application/dto/create-user.dto';
-import { UpdateUserDto } from '../../application/dto/update-user.dto';
+import { CreateUserUseCase } from '../../application/use-cases/create-user';
+import { GetUserUseCase } from '../../application/use-cases/get-user';
+import { UpdateUserUseCase } from '../../application/use-cases/update-user';
+import { DeleteUserUseCase } from '../../application/use-cases/delete-user';
+import { ListUsersUseCase, ListUsersQuery } from '../../application/use-cases/list-users';
+import { CreateUserDto } from '../../application/dto/create-user';
+import { UpdateUserDto } from '../../application/dto/update-user';
 import { UserResponseDto } from '../dto/user-response.dto';
-import { UserMapper } from '../../application/mappers/user.mapper';
+import { UserMapper } from '../../application/mappers/user';
 
 @ApiTags('Users')
 @Controller('users')

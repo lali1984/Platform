@@ -1,6 +1,6 @@
 // Обновленный User.entity.ts
 import { Entity, Column, PrimaryColumn, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
-import { UserRoleEntity } from './UserRole.entity'; // Добавить импорт
+import { UserRoleEntity } from './user-role.entity'; // Добавить импорт
 
 @Entity('users')
 export class UserEntity {

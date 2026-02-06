@@ -1,4 +1,4 @@
-import { UserStatus } from '../../domain/entities/user.entity';
+import { UserStatus } from '../../domain/entities/user-profile';
 export declare class UserResponseDto {
     id?: string;
     email?: string;

@@ -11,18 +11,18 @@ const compression_1 = __importDefault(require("compression"));
 const morgan_1 = __importDefault(require("morgan"));
 // Infrastructure
 const environment_1 = require("./infrastructure/config/environment");
-const bff_config_1 = require("./infrastructure/config/bff.config");
-const auth_http_client_1 = require("./infrastructure/http-clients/auth-http.client");
-const user_http_client_1 = require("./infrastructure/http-clients/user-http.client");
+const bff_1 = require("./infrastructure/config/bff");
+const auth_client_1 = require("./infrastructure/http-clients/auth-client");
+const user_client_1 = require("./infrastructure/http-clients/user-client");
 //import { InMemoryCacheAdapter } from './infrastructure/cache/in-memory-cache.adapter';
-const redis_cache_adapter_1 = require("./infrastructure/cache/redis-cache.adapter"); // Убедись, что этот файл создан
+const redis_cache_1 = require("./infrastructure/cache/redis-cache"); // Убедись, что этот файл создан
 // Domain & Application
-const get_user_profile_use_case_1 = require("./application/use-cases/get-user-profile.use-case");
-const auth_user_use_case_1 = require("./application/use-cases/auth-user.use-case");
+const get_user_profile_1 = require("./application/use-cases/get-user-profile");
+const auth_user_1 = require("./application/use-cases/auth-user");
 // Presentation
 const user_controller_1 = require("./presentation/controllers/user.controller");
 const auth_middleware_1 = require("./presentation/middleware/auth.middleware");
-const api_routes_1 = require("./presentation/routes/api.routes");
+const api_1 = require("./presentation/routes/api");
 const error_handler_middleware_1 = require("./presentation/middleware/error-handler.middleware");
 const auth_controller_1 = require("./presentation/controllers/auth.controller");
 class BFFApplication {
@@ -48,11 +48,11 @@ class BFFApplication {
         // Logging
         this.app.use((0, morgan_1.default)(environment_1.environment.NODE_ENV === 'production' ? 'combined' : 'dev'));
         // Body parsing
-        this.app.use(express_1.default.json({ limit: bff_config_1.bffConfig.server.maxPayloadSize }));
+        this.app.use(express_1.default.json({ limit: bff_1.bffConfig.server.maxPayloadSize }));
         this.app.use(express_1.default.urlencoded({ extended: true }));
         // Request timeout
         this.app.use((req, res, next) => {
-            req.setTimeout(bff_config_1.bffConfig.server.requestTimeout, () => {
+            req.setTimeout(bff_1.bffConfig.server.requestTimeout, () => {
                 res.status(408).json({
                     success: false,
                     error: 'Request timeout',
@@ -66,8 +66,8 @@ class BFFApplication {
     setupDependencies() {
         console.log('🚀 Initializing BFF dependencies...');
         // Infrastructure layer
-        const authClient = new auth_http_client_1.AuthHttpClient();
-        const userClient = new user_http_client_1.UserHttpClient();
+        const authClient = new auth_client_1.AuthHttpClient();
+        const userClient = new user_client_1.UserHttpClient();
         // Выбор кэша: Redis для продакшена, InMemory для разработки без Redis
         // Проверяем обязательную переменную
         if (!environment_1.environment.REDIS_URL) {
@@ -75,15 +75,15 @@ class BFFApplication {
             throw new Error('REDIS_URL environment variable is required');
         }
         console.log('✅ Using Redis cache');
-        const cache = new redis_cache_adapter_1.RedisCacheAdapter(environment_1.environment.REDIS_URL);
+        const cache = new redis_cache_1.RedisCacheAdapter(environment_1.environment.REDIS_URL);
         // Application layer
-        const getUserProfileUseCase = new get_user_profile_use_case_1.GetUserProfileUseCase(authClient, userClient, cache);
-        const authUserUseCase = new auth_user_use_case_1.AuthUserUseCase(authClient, userClient, cache);
+        const getUserProfileUseCase = new get_user_profile_1.GetUserProfileUseCase(authClient, userClient, cache);
+        const authUserUseCase = new auth_user_1.AuthUserUseCase(authClient, userClient, cache);
         // Presentation layer
         const userController = new user_controller_1.UserController(getUserProfileUseCase);
         const authController = new auth_controller_1.AuthController(authUserUseCase);
         const authMiddleware = new auth_middleware_1.AuthMiddleware(authClient);
-        const apiRoutes = new api_routes_1.ApiRoutes(userController, authController, authMiddleware);
+        const apiRoutes = new api_1.ApiRoutes(userController, authController, authMiddleware);
         // Mount routes
         this.app.use(apiRoutes.getRouter());
         console.log('✅ Dependencies initialized successfully');
@@ -147,7 +147,7 @@ class BFFApplication {
             // Проверяем состояние кэша
             if (environment_1.environment.REDIS_URL) {
                 try {
-                    const cache = new redis_cache_adapter_1.RedisCacheAdapter(environment_1.environment.REDIS_URL);
+                    const cache = new redis_cache_1.RedisCacheAdapter(environment_1.environment.REDIS_URL);
                     const cacheHealth = await cache.healthCheck();
                     health.dependencies.cacheStatus = cacheHealth ? 'ok' : 'error';
                     if (!cacheHealth)

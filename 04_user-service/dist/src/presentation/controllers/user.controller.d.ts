@@ -1,10 +1,10 @@
-import { CreateUserUseCase } from '../../application/use-cases/create-user.use-case';
-import { GetUserUseCase } from '../../application/use-cases/get-user.use-case';
-import { UpdateUserUseCase } from '../../application/use-cases/update-user.use-case';
-import { DeleteUserUseCase } from '../../application/use-cases/delete-user.use-case';
-import { ListUsersUseCase } from '../../application/use-cases/list-users.use-case';
-import { CreateUserDto } from '../../application/dto/create-user.dto';
-import { UpdateUserDto } from '../../application/dto/update-user.dto';
+import { CreateUserUseCase } from '../../application/use-cases/create-user';
+import { GetUserUseCase } from '../../application/use-cases/get-user';
+import { UpdateUserUseCase } from '../../application/use-cases/update-user';
+import { DeleteUserUseCase } from '../../application/use-cases/delete-user';
+import { ListUsersUseCase } from '../../application/use-cases/list-users';
+import { CreateUserDto } from '../../application/dto/create-user';
+import { UpdateUserDto } from '../../application/dto/update-user';
 import { UserResponseDto } from '../dto/user-response.dto';
 export declare class UserController {
     private readonly createUserUseCase;

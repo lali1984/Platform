@@ -12,7 +12,7 @@ var MetricsMiddleware_1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MetricsMiddleware = void 0;
 const common_1 = require("@nestjs/common");
-const metrics_service_1 = require("../../infrastructure/metrics/metrics.service");
+const metrics_1 = require("../../infrastructure/metrics/metrics");
 let MetricsMiddleware = MetricsMiddleware_1 = class MetricsMiddleware {
     constructor(metricsService) {
         this.metricsService = metricsService;
@@ -49,6 +49,6 @@ let MetricsMiddleware = MetricsMiddleware_1 = class MetricsMiddleware {
 exports.MetricsMiddleware = MetricsMiddleware;
 exports.MetricsMiddleware = MetricsMiddleware = MetricsMiddleware_1 = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [metrics_service_1.MetricsService])
+    __metadata("design:paramtypes", [metrics_1.MetricsService])
 ], MetricsMiddleware);
 //# sourceMappingURL=metrics.middleware.js.map

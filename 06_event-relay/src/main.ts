@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { EventRelayApplication } from './application/EventRelayApplication';
+import { EventRelayApplication } from './application/event-relay';
 import { createHealthController } from './presentation/HealthController';
-import { getEventRelayMetricsService } from './infrastructure/metrics/metrics.service';
+import { getEventRelayMetricsService } from './infrastructure/metrics/metrics-service';
 
 dotenv.config();
 

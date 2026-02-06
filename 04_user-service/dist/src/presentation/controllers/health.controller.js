@@ -296,7 +296,7 @@ let HealthController = HealthController_1 = class HealthController {
 };
 exports.HealthController = HealthController;
 __decorate([
-    (0, common_1.Get)(),
+    (0, common_1.Get)('helth'),
     (0, terminus_1.HealthCheck)(),
     (0, swagger_1.ApiOperation)({ summary: 'Полная проверка здоровья сервиса' }),
     (0, swagger_1.ApiResponse)({ status: 200, description: 'Сервис здоров' }),
@@ -306,7 +306,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], HealthController.prototype, "check", null);
 __decorate([
-    (0, common_1.Get)('live'),
+    (0, common_1.Get)('helth/live'),
     (0, swagger_1.ApiOperation)({ summary: 'Liveness probe - проверка что сервис жив' }),
     (0, swagger_1.ApiResponse)({ status: 200, description: 'Сервис жив' }),
     __metadata("design:type", Function),
@@ -314,7 +314,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], HealthController.prototype, "liveness", null);
 __decorate([
-    (0, common_1.Get)('ready'),
+    (0, common_1.Get)('helth/ready'),
     (0, swagger_1.ApiOperation)({ summary: 'Readiness probe - готовность принимать трафик' }),
     (0, swagger_1.ApiResponse)({ status: 200, description: 'Сервис готов' }),
     (0, swagger_1.ApiResponse)({ status: 503, description: 'Сервис не готов' }),
@@ -323,14 +323,14 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], HealthController.prototype, "readiness", null);
 __decorate([
-    (0, common_1.Get)('database'),
+    (0, common_1.Get)('helth/database'),
     (0, swagger_1.ApiOperation)({ summary: 'Проверка состояния базы данных' }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], HealthController.prototype, "checkDatabaseHealth", null);
 __decorate([
-    (0, common_1.Get)('kafka'),
+    (0, common_1.Get)('helth/kafka'),
     (0, swagger_1.ApiOperation)({ summary: 'Проверка состояния Kafka' }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
@@ -338,7 +338,7 @@ __decorate([
 ], HealthController.prototype, "checkKafkaHealth", null);
 exports.HealthController = HealthController = HealthController_1 = __decorate([
     (0, swagger_1.ApiTags)('Health'),
-    (0, common_1.Controller)('health'),
+    (0, common_1.Controller)(''),
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [terminus_1.HealthCheckService,
         terminus_1.TypeOrmHealthIndicator,
